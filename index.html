@@ -3,25 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KemProMed - Tech Licensing & Ecosystem Hub</title>
-    <!-- Tailwind CSS CDN -->
+    <title>KemProMed - Ecosistema Tecnológico & Capital Semilla</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
+            theme: { extend: { colors: { brand: { 50: '#f0f9ff', 500: '#0ea5e9', 600: '#0284c7' } } } }
         }
     </script>
 </head>
@@ -30,24 +17,18 @@
     <!-- Header / Navbar -->
     <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            
-            <!-- Logotipo Integrado KemProMed -->
             <div class="flex items-center gap-3">
                 <div class="bg-gradient-to-tr from-sky-600 to-indigo-600 p-2 rounded-xl shadow-lg shadow-sky-500/20 border border-sky-400/30 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
                 <div class="flex flex-col">
                     <div class="flex items-center gap-1.5">
                         <span class="text-lg font-extrabold tracking-tight text-white leading-tight">KemProMed</span>
                         <span class="text-[10px] text-sky-400 font-semibold px-2 py-0.5 rounded-full border border-sky-500/30 bg-sky-500/10">Ecosystem</span>
                     </div>
-                    <span class="text-[10px] text-slate-400 font-medium">Autoría: Dr. Mauro Ernesto Falcón Muñoz</span>
+                    <span class="text-[10px] text-slate-400 font-medium">Fundador: Dr. Mauro Ernesto Falcón Muñoz</span>
                 </div>
             </div>
-
-            <!-- Navegación & Agenda -->
             <div class="flex items-center gap-3">
                 <a href="https://www.meta.ai/share/a/8d791a0c-f5de-410b-88f9-d4070f7935b8" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
                     <span>Librería Digital</span>
@@ -61,75 +42,131 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
         
-        <!-- Welcome Hero / Motor Central Focus -->
+        <!-- Hero Principal -->
         <div id="motor" class="relative overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-6 sm:p-10">
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
             <div class="relative z-10 max-w-3xl space-y-4">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-                    Ecosistema Tecnológico & Capital Semilla
+                    Infraestructura Multimodular & Software Industrial
                 </div>
-                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                    Plataforma Central KemProMed
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                    Tecnología que no especula, asegura.
                 </h1>
-                <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-                    Infraestructura dedicada al desarrollo de software, licenciamiento tecnológico, asesorías avanzadas y distribución del motor inteligente central.
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    KemProMed es un ecosistema tecnológico diseñado para la transformación digital local, la optimización industrial mediante simulación y el desarrollo de arquitecturas B2B independientes, asíncronas y con gobernanza de código.
                 </p>
-                <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/80 inline-block text-xs text-slate-300">
-                    <span class="text-slate-500 font-semibold block uppercase tracking-wider text-[10px]">Titular de Derechos y Propiedad Intelectual:</span>
-                    <span class="text-white font-bold text-sm">Dr. Mauro Ernesto Falcón Muñoz</span>
+                <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800/80 inline-flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-xs text-slate-300">
+                    <div>
+                        <span class="text-slate-500 font-semibold block uppercase tracking-wider text-[10px]">Titular de Derechos y Propiedad Intelectual:</span>
+                        <span class="text-white font-bold text-sm">Dr. Mauro Ernesto Falcón Muñoz</span>
+                    </div>
+                    <div class="sm:border-l sm:border-slate-800 sm:pl-6">
+                        <span class="text-slate-500 font-semibold block uppercase tracking-wider text-[10px]">Cobertura de Operación:</span>
+                        <span class="text-sky-400 font-semibold text-xs">San Luis Río Colorado | Veracruz | Q. Roo | Tlalnepantla</span>
+                    </div>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-3 pt-2">
                     <a href="https://k-aura-ser.onrender.com" target="_blank" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-sky-600/20">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        <span>Acceder al Motor Principal (K-AURA)</span>
+                        <span>Motor Principal (K-AURA)</span>
                     </a>
                     <a href="https://www.meta.ai/share/a/8d791a0c-f5de-410b-88f9-d4070f7935b8" target="_blank" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                        <span>Ver Colección de Libros</span>
+                        <span>Obras y Libros Digitales</span>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Seccion 1: Librería Digital & Publicaciones -->
+        <!-- Seccion: Pilares del Ecosistema -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    Estructura Multimodular & Áreas de Impacto
+                </h2>
+                <span class="text-xs text-slate-400">Modelos B2B, SaaS e Industria</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tarjeta 1: KemProMed Flow & K-AURA -->
+                <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-sky-500/40 transition flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold">⚡</div>
+                        <h3 class="text-base font-bold text-white">KemProMed Flow & K-aura</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Infraestructura Fintech B2B con procesamiento asíncrono, monitoreo trópico on-chain y mitigación de volatilidad para transacciones Web3.</p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-sky-400 flex items-center gap-1">SaaS & Fintech B2B →</span>
+                </div>
+
+                <!-- Tarjeta 2: KemProMed Studio & AI -->
+                <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-indigo-500/40 transition flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold">🤖</div>
+                        <h3 class="text-base font-bold text-white">KemProMed Studio & AI</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Desarrollo de aplicaciones personalizadas, agentes inteligentes y modelos de automatización para elevar la competitividad de comercios y PyMEs.</p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-indigo-400 flex items-center gap-1">Transformación Digital →</span>
+                </div>
+
+                <!-- Tarjeta 3: Simulación Industrial -->
+                <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-amber-500/40 transition flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold">🏭</div>
+                        <h3 class="text-base font-bold text-white">Simulación Industrial (Tom & Alx)</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Digitalización integral de plantas de manufactura. Reducción de hasta un 40% en desperdicios operativos mediante simulación y control de entropía.</p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-amber-400 flex items-center gap-1">Optimización Manufacturera →</span>
+                </div>
+
+                <!-- Tarjeta 4: Salud & Formación -->
+                <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/40 transition flex flex-col justify-between space-y-4">
+                    <div class="space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">🩺</div>
+                        <h3 class="text-base font-bold text-white">Gestión de Salud & Talento</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Interconexión de redes médicas, expediente electrónico y programas de formación práctica e incorporación de talento profesional en software.</p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-emerald-400 flex items-center gap-1">Impacto Social & Salud →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion: Publicaciones & Librería Digital -->
         <section id="libros" class="space-y-4">
             <div class="flex items-center justify-between">
                 <h2 class="text-xl font-bold text-white flex items-center gap-2">
                     <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    Librería Digital & Publicaciones
+                    Librería Digital & Obras
                 </h2>
-                <span class="text-xs text-slate-400">Publicaciones Especializadas</span>
+                <span class="text-xs text-slate-400">Publicaciones de Autor</span>
             </div>
 
-            <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="space-y-2 max-w-xl">
-                    <h3 class="text-lg font-bold text-white">Catálogo Digital de Libros y Obras</h3>
-                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                        Acceda a la colección completa de libros, publicaciones y material técnico sobre el ecosistema KemProMed, arquitectura de software y teoría tecnológica.
-                    </p>
+                    <h3 class="text-lg font-bold text-white">Catálogo de Obras & Manifiestos de Innovación</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Acceda a las obras del Dr. Mauro Ernesto Falcón Muñoz ("Del Rechazo a la Resiliencia", textos técnicos y ensayos sobre arquitectura de software y teoría tecnológica).</p>
                 </div>
                 <a href="https://www.meta.ai/share/a/8d791a0c-f5de-410b-88f9-d4070f7935b8" target="_blank" class="w-full md:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white font-semibold text-sm transition flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-sky-600/20">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    <span>Abrir Catálogo de Libros</span>
+                    <span>Abrir Catálogo Completo</span>
                 </a>
             </div>
         </section>
 
-        <!-- Seccion 2: Licenciamiento & Pasarela de Pagos -->
+        <!-- Seccion: Licenciamiento & Pasarela de Pagos -->
         <section id="licenciamiento" class="space-y-4">
             <div class="flex items-center justify-between">
                 <h2 class="text-xl font-bold text-white flex items-center gap-2">
                     <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    Licenciamiento Tecnológico & Pagos
+                    Licenciamiento Tecnológico & Pasarela
                 </h2>
-                <span class="text-xs text-slate-400">Concepto: Derechos de Uso & Software</span>
+                <span class="text-xs text-slate-400">Derechos de Uso & Adquisición</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Tarjeta / Transferencia SPEI -->
-                <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-4">
+                <!-- Tarjeta SPEI / Clip -->
+                <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-4">
                     <div>
                         <div class="flex items-center justify-between mb-3">
                             <span class="text-sm font-semibold text-slate-200">Tarjeta o Transferencia (SPEI)</span>
@@ -137,8 +174,8 @@
                         </div>
                         <div class="space-y-3 text-sm">
                             <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                                <span class="text-xs text-slate-500 block">Concepto de Pago:</span>
-                                <span class="font-medium text-slate-200">Licenciamiento / Asesoría Tecnológica / Libros</span>
+                                <span class="text-xs text-slate-500 block">Concepto:</span>
+                                <span class="font-medium text-slate-200">Licenciamiento / Software / Asesoría / Libros</span>
                             </div>
                             <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
                                 <div>
@@ -158,15 +195,13 @@
                 </div>
 
                 <!-- Pasarela Crypto -->
-                <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-4">
+                <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-4">
                     <div>
                         <div class="flex items-center justify-between mb-3">
                             <span class="text-sm font-semibold text-slate-200">Pago Descentralizado (Criptomonedas)</span>
                             <span class="px-2 py-0.5 text-[10px] bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded">Web3 / Crypto</span>
                         </div>
-                        <p class="text-xs text-slate-400 mb-4">
-                            Suscripción directa a módulos tecnológicos, licencias y libros mediante activos digitales.
-                        </p>
+                        <p class="text-xs text-slate-400 mb-4">Suscripción a licencias de software, módulos industriales y libros mediante criptoactivos.</p>
                         <div class="grid grid-cols-3 gap-2">
                             <button onclick="openCryptoModal('BTC')" class="p-3 rounded-lg bg-slate-950 border border-slate-800 hover:border-amber-500/50 text-center transition group">
                                 <span class="block font-bold text-amber-400">BTC</span>
@@ -190,74 +225,34 @@
             </div>
         </section>
 
-        <!-- Seccion 3: Mentorías & Asesorías Tecnológicas -->
+        <!-- Seccion: Agendamiento -->
         <section id="mentorias" class="space-y-4">
             <div class="flex items-center justify-between">
                 <h2 class="text-xl font-bold text-white flex items-center gap-2">
                     <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    Mentorías & Asesoría Especializada
+                    Asesoría & Sesiones Ejecutivas
                 </h2>
-                <span class="text-xs text-slate-400">Google Calendar Directo</span>
+                <span class="text-xs text-slate-400">Atención Directa de Autor</span>
             </div>
 
-            <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="space-y-2 max-w-xl">
-                    <h3 class="text-lg font-bold text-white">Agende una Sesión de Asesoría en Tecnología</h3>
-                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                        Sesiones 1 a 1 impartidas directamente por el Dr. Mauro Ernesto Falcón Muñoz para revisión de arquitectura de sistemas, integración de motores inteligentes y licenciamiento.
-                    </p>
+                    <h3 class="text-lg font-bold text-white">Agende una Cita Directa con el Dr. Mauro Falcón</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Sesiones de 60 minutos para revisión de proyectos tecnológicos, integración industrial, licencias B2B o mentoría técnica en arquitectura de sistemas.</p>
                 </div>
                 <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="w-full md:w-auto px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-sky-600/20">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    <span>Seleccionar Horario en Calendario</span>
+                    <span>Seleccionar Fecha en Google Calendar</span>
                 </a>
-            </div>
-        </section>
-
-        <!-- Seccion 4: Autoría y Datos Oficiales -->
-        <section id="contacto" class="space-y-4">
-            <div class="flex items-center justify-between">
-                <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                    <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    Contacto Oficial & Ficha de Autoría
-                </h2>
-                <span class="text-xs text-slate-400">Propiedad Intelectual Registrada</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-2">
-                    <span class="text-xs text-slate-500 block uppercase font-semibold">Autor y Fundador</span>
-                    <h3 class="text-base font-bold text-white">Dr. Mauro Ernesto Falcón Muñoz</h3>
-                    <p class="text-xs text-slate-400">Dirección general y desarrollo de arquitectura del Ecosistema KemProMed.</p>
-                </div>
-
-                <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-2">
-                    <span class="text-xs text-slate-500 block uppercase font-semibold">Atención & Consultoría</span>
-                    <h3 class="text-base font-bold text-white">Agenda Electrónica</h3>
-                    <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="text-xs text-sky-400 hover:underline flex items-center gap-1 mt-1 font-semibold">
-                        Agendar cita vía Google Calendar →
-                    </a>
-                </div>
-
-                <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-2">
-                    <span class="text-xs text-slate-500 block uppercase font-semibold">Dominio & Servidores</span>
-                    <h3 class="text-base font-bold text-white">kempromed.com</h3>
-                    <span class="text-xs text-emerald-400 flex items-center gap-1">Servidor Render Activo</span>
-                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-slate-800 bg-slate-900/30 py-6 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <div>
-                © 2026 KemProMed Ecosystem. Todos los derechos reservados.
-            </div>
-            <div>
-                Propiedad Intelectual y Autoría: <span class="text-slate-300 font-semibold">Dr. Mauro Ernesto Falcón Muñoz</span>
-            </div>
+            <div>© 2026 KemProMed Ecosystem. Todos los derechos reservados.</div>
+            <div>Propiedad Intelectual y Dirección General: <span class="text-slate-300 font-semibold">Dr. Mauro Ernesto Falcón Muñoz</span></div>
         </div>
     </footer>
 
@@ -269,7 +264,7 @@
                 <button onclick="closeCryptoModal()" class="text-slate-400 hover:text-white font-bold">✕</button>
             </div>
             <div class="space-y-3 text-xs">
-                <p class="text-slate-400">Depósito para pago de licenciamiento tecnológico, libros o asesorías.</p>
+                <p class="text-slate-400">Depósito directo para licencias de software, módulos industriales o libros.</p>
                 <div class="p-3 bg-slate-950 border border-slate-800 rounded-lg space-y-1">
                     <span class="text-slate-500 block">Dirección Pública:</span>
                     <span id="cryptoAddress" class="font-mono text-sky-400 font-semibold break-all text-[11px]">0x71C7656EC7ab88b098defB751B7401B5f6d8976F</span>
@@ -279,7 +274,6 @@
         </div>
     </div>
 
-    <!-- Script de Interactividad -->
     <script>
         function copyClabe() {
             const clabe = document.getElementById('clabeText').innerText;
@@ -288,12 +282,10 @@
             btnText.innerText = '¡Copiado!';
             setTimeout(() => { btnText.innerText = 'Copiar'; }, 2000);
         }
-
         function openCryptoModal(coin) {
             const modal = document.getElementById('cryptoModal');
             const title = document.getElementById('cryptoTitle');
             const addr = document.getElementById('cryptoAddress');
-            
             if(coin === 'BTC') {
                 title.innerText = 'Depósito en Bitcoin (BTC)';
                 addr.innerText = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa';
@@ -306,7 +298,6 @@
             }
             modal.classList.remove('hidden');
         }
-
         function closeCryptoModal() {
             document.getElementById('cryptoModal').classList.add('hidden');
         }
