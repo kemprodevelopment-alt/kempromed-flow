@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KemProMed - Ecosystem & Hub de Servicios</title>
+    <title>KemProMed - Tech Licensing & Ecosystem Hub</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,165 +34,29 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="bg-brand-500/10 p-2 rounded-lg border border-brand-500/20">
-                    <i data-lucide="activity" class="w-6 h-6 text-brand-500"></i>
+                    <i data-lucide="cpu" class="w-6 h-6 text-brand-500"></i>
                 </div>
-                <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
-                    KemProMed <span class="text-brand-500 text-xs px-2 py-0.5 rounded border border-brand-500/30 bg-brand-500/10 ml-1">Ecosystem</span>
-                </span>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent leading-tight">
+                        KemProMed <span class="text-brand-500 text-xs px-2 py-0.5 rounded border border-brand-500/30 bg-brand-500/10 ml-1">Ecosystem</span>
+                    </span>
+                    <span class="text-[10px] text-slate-400 font-medium">Autoría: Dr. Mauro Ernesto Falcón Muñoz</span>
+                </div>
             </div>
             
             <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
-                <a href="#pagos" class="hover:text-brand-400 transition">Pagos & Crypto</a>
-                <a href="#libros" class="hover:text-brand-400 transition">Librería</a>
-                <a href="#agenda" class="hover:text-brand-400 transition">Agenda</a>
-                <a href="#academia" class="hover:text-brand-400 transition">Academia</a>
+                <a href="#motor" class="hover:text-brand-400 transition">Motor Principal</a>
+                <a href="#licenciamiento" class="hover:text-brand-400 transition">Licenciamiento</a>
+                <a href="#mentorias" class="hover:text-brand-400 transition">Mentorías</a>
+                <a href="#contacto" class="hover:text-brand-400 transition">Contacto</a>
             </nav>
 
             <div class="flex items-center gap-3">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    En Línea
-                </span>
+                <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-brand-600 hover:bg-brand-500 text-white transition shadow-sm">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Agenda Google
+                </a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-        
-        <!-- Welcome Hero -->
-        <div class="relative overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-6 sm:p-10">
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="relative z-10 max-w-3xl space-y-4">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold uppercase tracking-wider">
-                    Plataforma Integral de Salud e Inteligencia
-                </div>
-                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                    KemProMed Ecosystem
-                </h1>
-                <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
-                    Portal central para servicios de salud, adquisición de publicaciones médicas, agendamiento de citas, módulos de estudio y pasarela de pagos multimoneda (FIAT y Criptomonedas).
-                </p>
-                <div class="flex flex-wrap gap-3 pt-2">
-                    <a href="#agenda" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition shadow-lg shadow-brand-600/20">
-                        <i data-lucide="calendar" class="w-4 h-4"></i> Agendar Cita
-                    </a>
-                    <a href="#libros" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm border border-slate-700 transition">
-                        <i data-lucide="book-open" class="w-4 h-4"></i> Ver Libros
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Seccion 1: Pasarela de Pagos (Clip + Crypto) -->
-        <section id="pagos" class="space-y-4">
-            <div class="flex items-center justify-between">
-                <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                    <i data-lucide="wallet" class="w-5 h-5 text-brand-500"></i>
-                    Pasarela de Pagos & Transferencias
-                </h2>
-                <span class="text-xs text-slate-400">Transacciones Seguras SSL</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- FIAT / Clip -->
-                <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-sm font-semibold text-slate-200">Transferencia Bancaria (Clip)</span>
-                            <span class="px-2 py-0.5 text-[10px] bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded">FIAT MXN</span>
-                        </div>
-                        <div class="space-y-3 text-sm">
-                            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                                <span class="text-xs text-slate-500 block">Titular de la cuenta:</span>
-                                <span class="font-medium text-slate-200">Vicente Perez Lopez</span>
-                            </div>
-                            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-                                <div>
-                                    <span class="text-xs text-slate-500 block">CLABE (Clip):</span>
-                                    <span id="clabeText" class="font-mono text-brand-400 font-semibold">730969200011330860</span>
-                                </div>
-                                <button onclick="copyClabe()" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs flex items-center gap-1.5 transition border border-slate-700">
-                                    <i data-lucide="copy" class="w-3.5 h-3.5"></i> <span id="copyBtnText">Copiar</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-xs text-slate-500 flex items-center justify-between pt-2 border-t border-slate-800">
-                        <span>Acepta tarjetas de débito/crédito y SPEI</span>
-                        <span class="text-emerald-400 flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Clip Verificado</span>
-                    </div>
-                </div>
-
-                <!-- Criptomonedas -->
-                <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-sm font-semibold text-slate-200">Pagos con Criptomonedas</span>
-                            <span class="px-2 py-0.5 text-[10px] bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded">Web3 / Crypto</span>
-                        </div>
-                        <p class="text-xs text-slate-400 mb-4">
-                            Soportamos pagos descentralizados directos para servicios de consultoría y compra de libros.
-                        </p>
-                        <div class="grid grid-cols-3 gap-2">
-                            <button onclick="openCryptoModal('BTC')" class="p-3 rounded-lg bg-slate-950 border border-slate-800 hover:border-amber-500/50 text-center transition group">
-                                <span class="block font-bold text-amber-400 group-hover:scale-105 transition">BTC</span>
-                                <span class="text-[10px] text-slate-500">Bitcoin</span>
-                            </button>
-                            <button onclick="openCryptoModal('ETH')" class="p-3 rounded-lg bg-slate-950 border border-slate-800 hover:border-indigo-500/50 text-center transition group">
-                                <span class="block font-bold text-indigo-400 group-hover:scale-105 transition">ETH</span>
-                                <span class="text-[10px] text-slate-500">Ethereum</span>
-                            </button>
-                            <button onclick="openCryptoModal('USDT')" class="p-3 rounded-lg bg-slate-950 border border-slate-800 hover:border-emerald-500/50 text-center transition group">
-                                <span class="block font-bold text-emerald-400 group-hover:scale-105 transition">USDT</span>
-                                <span class="text-[10px] text-slate-500">TRC20 / ERC20</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-xs text-slate-500 flex items-center justify-between pt-2 border-t border-slate-800">
-                        <span>Confirmación automática vía Blockchain</span>
-                        <i data-lucide="coins" class="w-4 h-4 text-amber-400"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seccion 2: Venta de Libros & Publicaciones -->
-        <section id="libros" class="space-y-4">
-            <div class="flex items-center justify-between">
-                <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                    <i data-lucide="book-open" class="w-5 h-5 text-brand-500"></i>
-                    Librería Digital KemProMed
-                </h2>
-                <span class="text-xs text-slate-400">Publicaciones Especializadas</span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Libro 1 -->
-                <div class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition">
-                    <div class="p-6 space-y-3">
-                        <div class="w-12 h-12 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
-                            <i data-lucide="file-text" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white">Manual de Protocolos Clínicos</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Guía completa sobre sistematización de flujos de trabajo médico e integración con herramientas de monitoreo moderno.
-                        </p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between border-t border-slate-800/60 mt-4">
-                        <span class="text-lg font-bold text-white">$450 MXN <span class="text-xs text-slate-500 font-normal">/ PDF</span></span>
-                        <button onclick="comprarLibro('Manual de Protocolos Clínicos')" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-medium transition">
-                            Adquirir
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Libro 2 -->
-                <div class="rounded-xl border border-slate-800 bg-slate-900/40 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition">
-                    <div class="p-6 space-y-3">
-                        <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white">Inteligencia Artificial en Salud</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Fundamentos y
