@@ -24,39 +24,266 @@
             }
         }
     </script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
 
     <!-- Header / Navbar -->
-    <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur sticky top-0 z-40">
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            
+            <!-- Logotipo Integrado KemProMed -->
             <div class="flex items-center gap-3">
-                <div class="bg-brand-500/10 p-2 rounded-lg border border-brand-500/20">
-                    <i data-lucide="cpu" class="w-6 h-6 text-brand-500"></i>
+                <div class="bg-gradient-to-tr from-sky-600 to-indigo-600 p-2 rounded-xl shadow-lg shadow-sky-500/20 border border-sky-400/30 flex items-center justify-center">
+                    <!-- SVG Logo Emblem -->
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-lg font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent leading-tight">
-                        KemProMed <span class="text-brand-500 text-xs px-2 py-0.5 rounded border border-brand-500/30 bg-brand-500/10 ml-1">Ecosystem</span>
-                    </span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-lg font-extrabold tracking-tight text-white leading-tight">KemProMed</span>
+                        <span class="text-[10px] text-sky-400 font-semibold px-2 py-0.5 rounded-full border border-sky-500/30 bg-sky-500/10">Ecosystem</span>
+                    </div>
                     <span class="text-[10px] text-slate-400 font-medium">Autoría: Dr. Mauro Ernesto Falcón Muñoz</span>
                 </div>
             </div>
-            
-            <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
-                <a href="#motor" class="hover:text-brand-400 transition">Motor Principal</a>
-                <a href="#licenciamiento" class="hover:text-brand-400 transition">Licenciamiento</a>
-                <a href="#mentorias" class="hover:text-brand-400 transition">Mentorías</a>
-                <a href="#contacto" class="hover:text-brand-400 transition">Contacto</a>
-            </nav>
 
+            <!-- Botón Agenda Google -->
             <div class="flex items-center gap-3">
-                <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-brand-600 hover:bg-brand-500 text-white transition shadow-sm">
-                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Agenda Google
+                <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white transition shadow-md shadow-sky-600/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>Agenda Google</span>
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+        
+        <!-- Welcome Hero / Motor Central Focus -->
+        <div id="motor" class="relative overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-6 sm:p-10">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 max-w-3xl space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider">
+                    Ecosistema Tecnológico & Capital Semilla
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+                    Plataforma Central KemProMed
+                </h1>
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                    Infraestructura dedicada al desarrollo de software, licenciamiento tecnológico, asesorías avanzadas y distribución del motor inteligente central.
+                </p>
+                <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/80 inline-block text-xs text-slate-300">
+                    <span class="text-slate-500 font-semibold block uppercase tracking-wider text-[10px]">Titular de Derechos y Propiedad Intelectual:</span>
+                    <span class="text-white font-bold text-sm">Dr. Mauro Ernesto Falcón Muñoz</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a href="https://k-aura-ser.onrender.com" target="_blank" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-sky-600/20">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <span>Acceder al Motor Principal (K-AURA)</span>
+                    </a>
+                    <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span>Agendar Asesoría / Mentoría</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seccion 1: Licenciamiento & Pasarela de Pagos -->
+        <section id="licenciamiento" class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    Licenciamiento Tecnológico & Pagos
+                </h2>
+                <span class="text-xs text-slate-400">Concepto: Derechos de Uso & Software</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tarjeta / Transferencia SPEI -->
+                <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-slate-200">Tarjeta o Transferencia (SPEI)</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded">FIAT / Clip</span>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
+                                <span class="text-xs text-slate-500 block">Concepto de Pago:</span>
+                                <span class="font-medium text-slate-200">Licenciamiento / Asesoría Tecnológica KemProMed</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
+                                <div>
+                                    <span class="text-xs text-slate-500 block">CLABE Interbancaria:</span>
+                                    <span id="clabeText" class="font-mono text-sky-400 font-semibold">730969200011330860</span>
+                                </div>
+                                <button onclick="copyClabe()" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs flex items-center gap-1.5 transition border border-slate-700">
+                                    <span id="copyBtnText">Copiar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-slate-500 flex items-center justify-between pt-2 border-t border-slate-800">
+                        <span>Acepta Visa, Mastercard, AMEX y SPEI</span>
+                        <span class="text-emerald-400 flex items-center gap-1">Pago Seguro</span>
+                    </div>
+                </div>
+
+                <!-- Pasarela Crypto -->
+                <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-semibold text-slate-200">Pago Descentralizado (Criptomonedas)</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded">Web3 / Crypto</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">
+                            Suscripción directa a módulos tecnológicos y licencias mediante activos digitales.
+                        </p>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button onclick="openCryptoModal('BTC')" class="p-3 rounded-lg bg-slate-950 border border-slate-800 hover:border-amber-500/50 text-center transition group">
+                                <span class="block font-bold text-amber-400">BTC</span>
+                                <span class="text-[10px] text-slate-500">Bitcoin</span>
+                            </button>
+                            <button onclick="openCryptoModal('ETH')" class="p-3 rounded-lg bg-slate-950 border border-slate-800 hover:border-indigo-500/50 text-center transition group">
+                                <span class="block font-bold text-indigo-400">ETH</span>
+                                <span class="text-[10px] text-slate-500">Ethereum</span>
+                            </button>
+                            <button onclick="openCryptoModal('USDT')" class="p-3 rounded-lg bg-slate-950 border border-slate-800 hover:border-emerald-500/50 text-center transition group">
+                                <span class="block font-bold text-emerald-400">USDT</span>
+                                <span class="text-[10px] text-slate-500">TRC20 / ERC20</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-xs text-slate-500 flex items-center justify-between pt-2 border-t border-slate-800">
+                        <span>Validación en cadena de bloques</span>
+                        <span class="text-amber-400 font-semibold">Crypto Direct</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion 2: Mentorías & Asesorías Tecnológicas -->
+        <section id="mentorias" class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    Mentorías & Asesoría Especializada
+                </h2>
+                <span class="text-xs text-slate-400">Google Calendar Directo</span>
+            </div>
+
+            <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 max-w-xl">
+                    <h3 class="text-lg font-bold text-white">Agende una Sesión de Asesoría en Tecnología</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        Sesiones 1 a 1 impartidas directamente por el Dr. Mauro Ernesto Falcón Muñoz para revisión de arquitectura de sistemas, integración de motores inteligentes y licenciamiento.
+                    </p>
+                </div>
+                <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="w-full md:w-auto px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-sky-600/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>Seleccionar Horario en Calendario</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Seccion 3: Autoría y Datos Oficiales -->
+        <section id="contacto" class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    Contacto Oficial & Ficha de Autoría
+                </h2>
+                <span class="text-xs text-slate-400">Propiedad Intelectual Registrada</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-2">
+                    <span class="text-xs text-slate-500 block uppercase font-semibold">Autor y Fundador</span>
+                    <h3 class="text-base font-bold text-white">Dr. Mauro Ernesto Falcón Muñoz</h3>
+                    <p class="text-xs text-slate-400">Dirección general y desarrollo de arquitectura del Ecosistema KemProMed.</p>
+                </div>
+
+                <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-2">
+                    <span class="text-xs text-slate-500 block uppercase font-semibold">Atención & Consultoría</span>
+                    <h3 class="text-base font-bold text-white">Agenda Electrónica</h3>
+                    <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="text-xs text-sky-400 hover:underline flex items-center gap-1 mt-1 font-semibold">
+                        Agendar cita vía Google Calendar →
+                    </a>
+                </div>
+
+                <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-2">
+                    <span class="text-xs text-slate-500 block uppercase font-semibold">Dominio & Servidores</span>
+                    <h3 class="text-base font-bold text-white">kempromed.com</h3>
+                    <span class="text-xs text-emerald-400 flex items-center gap-1">Servidor Render Activo</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900/30 py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div>
+                © 2026 KemProMed Ecosystem. Todos los derechos reservados.
+            </div>
+            <div>
+                Propiedad Intelectual y Autoría: <span class="text-slate-300 font-semibold">Dr. Mauro Ernesto Falcón Muñoz</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Crypto -->
+    <div id="cryptoModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 id="cryptoTitle" class="font-bold text-white text-base">Dirección de Depósito Crypto</h3>
+                <button onclick="closeCryptoModal()" class="text-slate-400 hover:text-white font-bold">✕</button>
+            </div>
+            <div class="space-y-3 text-xs">
+                <p class="text-slate-400">Depósito para pago de licenciamiento tecnológico o asesorías.</p>
+                <div class="p-3 bg-slate-950 border border-slate-800 rounded-lg space-y-1">
+                    <span class="text-slate-500 block">Dirección Pública:</span>
+                    <span id="cryptoAddress" class="font-mono text-sky-400 font-semibold break-all text-[11px]">0x71C7656EC7ab88b098defB751B7401B5f6d8976F</span>
+                </div>
+            </div>
+            <button onclick="closeCryptoModal()" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-semibold">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Script de Interactividad -->
+    <script>
+        function copyClabe() {
+            const clabe = document.getElementById('clabeText').innerText;
+            navigator.clipboard.writeText(clabe);
+            const btnText = document.getElementById('copyBtnText');
+            btnText.innerText = '¡Copiado!';
+            setTimeout(() => { btnText.innerText = 'Copiar'; }, 2000);
+        }
+
+        function openCryptoModal(coin) {
+            const modal = document.getElementById('cryptoModal');
+            const title = document.getElementById('cryptoTitle');
+            const addr = document.getElementById('cryptoAddress');
+            
+            if(coin === 'BTC') {
+                title.innerText = 'Depósito en Bitcoin (BTC)';
+                addr.innerText = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa';
+            } else if(coin === 'ETH') {
+                title.innerText = 'Depósito en Ethereum (ETH)';
+                addr.innerText = '0x71C7656EC7ab88b098defB751B7401B5f6d8976F';
+            } else {
+                title.innerText = 'Depósito USDT (TRC20 / ERC20)';
+                addr.innerText = 'TYD2v9kH87gJ11sK8mP2X91sK7xL9qM0pL';
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeCryptoModal() {
+            document.getElementById('cryptoModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
