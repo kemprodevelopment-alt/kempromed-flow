@@ -61,7 +61,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: #fff;
             box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
@@ -139,15 +139,23 @@
             flex-grow: 1;
         }
 
-        .crypto-box {
+        .contact-info {
             background-color: #0d1117;
-            border: 1px dashed var(--border-color);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 12px;
-            margin-bottom: 15px;
-            font-size: 0.8rem;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            word-break: break-all;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        .contact-info a {
+            color: var(--accent-cyan);
+            text-decoration: none;
         }
 
         .btn {
@@ -174,6 +182,11 @@
 
         .btn-green {
             background: linear-gradient(135deg, #2ea043, #238636);
+            color: #ffffff;
+        }
+
+        .btn-purple {
+            background: linear-gradient(135deg, var(--accent-purple), #58a6ff);
             color: #ffffff;
         }
 
@@ -210,7 +223,6 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <!-- Logotipo de KemProMed / K-AURA -->
                 <div class="logo-avatar">KPM</div>
             </div>
             <div class="doctor-title">Dr. Mauro Ernesto Falcón Muñoz</div>
@@ -249,15 +261,15 @@
                         Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de triaje y expediente clínico.
                     </p>
                 </div>
-                <a href="https://aistudio.google.com" target="_blank" rel="noopener" class="btn btn-primary">
+                <a href="https://ai.studio/apps/30730ccc-f608-415e-9079-d36afd3c417b?fullscreenApplet=true" target="_blank" rel="noopener" class="btn btn-primary">
                     Acceder a Nexus (MediPulse AI) &rarr;
                 </a>
             </div>
 
         </main>
 
-        <!-- Pasarelas de Pago y Servicios Empresariales -->
-        <div class="section-title">💳 Pasarelas de Pago y Catálogo</div>
+        <!-- Pasarelas de Pago y Publicaciones -->
+        <div class="section-title">💳 Pasarelas de Pago y Publicaciones</div>
         <div class="grid">
             
             <!-- Pasarela Clip -->
@@ -268,69 +280,67 @@
                         <span class="badge" style="background-color: rgba(255, 80, 0, 0.2); color: #ff8555; border-color: rgba(255, 80, 0, 0.4);">Clip MX</span>
                     </div>
                     <p class="card-description">
-                        Procesa pagos seguros en moneda nacional para E-Books, consultoría empresarial, licencias K-Aura y servicios KemPro Digital Solutions.
+                        Ingresa el monto y concepto para realizar tu pago de forma segura por medio de Clip (E-Books, Asesoria empresarial, Licencias K-Aura).
                     </p>
                 </div>
-                <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" rel="noopener" class="btn btn-clip">
-                    Ir al Catálogo de Pagos Clip &rarr;
+                <a href="https://clip.mx/@kemprodigitalsolutions" target="_blank" rel="noopener" class="btn btn-clip">
+                    Pagar con Clip &rarr;
                 </a>
             </div>
 
-            <!-- Nodos Cripto B2B -->
+            <!-- Libros y Publicaciones Meta AI -->
             <div class="card">
                 <div>
                     <div class="card-title">
-                        <span>Nodos Cripto & B2B</span>
-                        <span class="badge" style="background-color: rgba(0, 210, 255, 0.2); color: #00d2ff; border-color: rgba(0, 210, 255, 0.4);">Web3</span>
+                        <span>Libros & E-Books</span>
+                        <span class="badge" style="background-color: rgba(121, 40, 202, 0.2); color: #b388ff; border-color: rgba(121, 40, 202, 0.4);">Meta AI</span>
                     </div>
                     <p class="card-description">
-                        Aceptación de pagos descentralizados y licenciamiento institucional en red multimodular.
+                        Acceso a la biblioteca de publicaciones clínicas, investigación tecnológica y material académico especializado.
                     </p>
-                    <div class="crypto-box">
-                        <strong>POL/MATIC (Polygon):</strong><br>
-                        <code>0x... (Red Polygon Mainnet)</code>
-                    </div>
                 </div>
-                <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" rel="noopener" class="btn btn-secondary">
-                    Consultar Licenciamiento Cripto &rarr;
+                <a href="https://meta.ai/share/a/8d791a0c-f5de-410b-88f9-d4070f7935b8" target="_blank" rel="noopener" class="btn btn-purple">
+                    Ver Libros y Publicaciones &rarr;
                 </a>
             </div>
 
         </div>
 
-        <!-- Agenda, Citas y Contacto -->
+        <!-- Agenda Médica y Contacto Directo -->
         <div class="section-title">📅 Agenda Médica y Contacto Directo</div>
         <div class="grid">
             
-            <!-- Agenda Médica -->
+            <!-- Agenda Médica Google Calendar -->
             <div class="card">
                 <div>
                     <div class="card-title">
-                        <span>Gestión de Citas</span>
-                        <span class="badge">Agenda</span>
+                        <span>KemProMed Calendario</span>
+                        <span class="badge">Google Calendar</span>
                     </div>
                     <p class="card-description">
-                        Reserva de consultas médicas, evaluaciones clínicas y asesorías especializadas.
+                        Reserva de consultas médicas, evaluaciones clínicas y asesorías tecnológicas de forma directa.
                     </p>
                 </div>
-                <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" rel="noopener" class="btn btn-green">
-                    Agendar Cita / Consulta &rarr;
+                <a href="https://calendar.app.google/5g5t19o16A7pEzvD9" target="_blank" rel="noopener" class="btn btn-green">
+                    Agendar Cita en Calendario &rarr;
                 </a>
             </div>
 
-            <!-- Contacto WhatsApp -->
+            <!-- Contacto Oficial -->
             <div class="card">
                 <div>
                     <div class="card-title">
                         <span>Atención Directa</span>
-                        <span class="badge" style="background-color: rgba(35, 134, 54, 0.2); color: #3fb950; border-color: rgba(35, 134, 54, 0.4);">WhatsApp</span>
+                        <span class="badge" style="background-color: rgba(35, 134, 54, 0.2); color: #3fb950; border-color: rgba(35, 134, 54, 0.4);">Oficial</span>
                     </div>
-                    <p class="card-description">
-                        Canal directo de comunicación rápida, soporte técnico y atención médica.
-                    </p>
+                    <div class="contact-info">
+                        <p>✉️ <strong>Email:</strong> <a href="mailto:direccion@kempromed.com">direccion@kempromed.com</a></p>
+                        <p>🇲🇽 <strong>Tel MX:</strong> <a href="https://wa.me/526531552063" target="_blank">+52 (653) 155-2063</a></p>
+                        <p>🇺🇸 <strong>Tel US:</strong> <a href="tel:+16617508599">+1 (661) 750-8599</a></p>
+                    </div>
                 </div>
-                <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" rel="noopener" class="btn btn-secondary">
-                    Enviar Mensaje &rarr;
+                <a href="https://wa.me/526531552063" target="_blank" rel="noopener" class="btn btn-secondary">
+                    Enviar WhatsApp Directo &rarr;
                 </a>
             </div>
 
