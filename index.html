@@ -1,441 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KemProMed - Tech Licensing & Ecosystem Hub</title>
-  <meta name="description" content="Plataforma Central KemProMed. Infraestructura dedicada al desarrollo de software, motor K-AURA, módulo Nexus, librería digital, red cripto y agenda del Dr. Mauro Ernesto Falcón Muñoz.">
-  <style>
-    :root {
-      --bg: #0b0f19;
-      --card-bg: #111827;
-      --border: #1f2937;
-      --primary: #00f2fe;
-      --accent: #4facfe;
-      --text: #f3f4f6;
-      --text-muted: #9ca3af;
-      --kaura-color: #a855f7;
-      --crypto-color: #f7931a;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KemProMed - Tech Licensing & Ecosystem Hub</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --accent-cyan: #00d2ff;
+            --accent-blue: #0072ff;
+            --accent-purple: #7928ca;
+            --accent-clip: #ff5000;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 2rem 1rem;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    header {
-      text-align: center;
-      max-width: 900px;
-      margin-bottom: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        .container {
+            max-width: 850px;
+            width: 100%;
+        }
 
-    .brand-logo-wrapper {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
 
-    .brand-logo {
-      max-width: 180px;
-      height: auto;
-      object-fit: contain;
-    }
+        .doctor-title {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
 
-    .brand-author {
-      font-size: 0.9rem;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
+        header h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
 
-    .brand-title {
-      font-size: 2.2rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.5px;
-    }
+        header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
 
-    header p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+        .section-title {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .main-container {
-      width: 100%;
-      max-width: 950px;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
 
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 1.25rem;
-      border-left: 3px solid var(--primary);
-      padding-left: 10px;
-    }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
 
-    /* MOTORES PRINCIPALES (GRID PARALELO: K-AURA + NEXUS) */
-    .engines-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-cyan);
+        }
 
-    @media (min-width: 768px) {
-      .engines-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+        .card-title {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    .engine-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    }
+        .card-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
 
-    .engine-card.kaura {
-      border-color: rgba(168, 85, 247, 0.4);
-    }
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: opacity 0.2s ease;
+        }
 
-    .engine-card.nexus {
-      border-color: rgba(0, 242, 254, 0.4);
-    }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #ffffff;
+        }
 
-    .badge-engine {
-      display: inline-block;
-      align-self: flex-start;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
+        .btn-clip {
+            background: linear-gradient(135deg, var(--accent-clip), #ff0055);
+            color: #ffffff;
+        }
 
-    .kaura .badge-engine {
-      background: rgba(168, 85, 247, 0.15);
-      color: #c084fc;
-      border: 1px solid rgba(168, 85, 247, 0.3);
-    }
+        .btn-secondary {
+            background-color: #21262d;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
 
-    .nexus .badge-engine {
-      background: rgba(0, 242, 254, 0.15);
-      color: var(--primary);
-      border: 1px solid rgba(0, 242, 254, 0.3);
-    }
+        .btn:hover {
+            opacity: 0.9;
+        }
 
-    .engine-card h3 {
-      font-size: 1.4rem;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-    }
+        .badge {
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            border-radius: 12px;
+            background-color: rgba(46, 160, 67, 0.2);
+            color: #3fb950;
+            border: 1px solid rgba(46, 160, 67, 0.4);
+            font-weight: bold;
+        }
 
-    .engine-card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-    }
-
-    .btn-engine {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-    }
-
-    .btn-kaura {
-      background: linear-gradient(135deg, #a855f7, #7c3aed);
-      color: #ffffff;
-    }
-
-    .btn-nexus {
-      background: linear-gradient(135deg, #00f2fe, #4facfe);
-      color: #0b0f19;
-    }
-
-    /* SECCIÓN CRIPTOMONEDAS Y PAGOS DIGITALES */
-    .crypto-box {
-      background: var(--card-bg);
-      border: 1px solid rgba(247, 147, 26, 0.3);
-      border-radius: 16px;
-      padding: 1.75rem;
-    }
-
-    .crypto-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-
-    .crypto-tag {
-      background: rgba(247, 147, 26, 0.1);
-      color: #f7931a;
-      border: 1px solid rgba(247, 147, 26, 0.3);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* LIBROS, RECURSOS Y META AI */
-    .grid-books {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-
-    @media (min-width: 768px) {
-      .grid-books {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .book-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .book-card h4 {
-      color: #ffffff;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .book-card p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      line-height: 1.5;
-      margin-bottom: 1.25rem;
-    }
-
-    .btn-link {
-      color: var(--primary);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    /* MAPA DE RED E INFRAESTRUCTURA */
-    .map-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem;
-      text-align: center;
-    }
-
-    .map-visual {
-      height: 160px;
-      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-
-    /* AGENDA DE CITAS */
-    .agenda-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    @media (min-width: 768px) {
-      .agenda-box {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-
-    footer {
-      margin-top: 4rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      border-top: 1px solid var(--border);
-      padding-top: 2rem;
-      width: 100%;
-      max-width: 950px;
-    }
-  </style>
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <!-- LOGOTIPO OFICIAL DE KEMPROMED -->
-    <div class="brand-logo-wrapper">
-      <img src="https://kempromed.com/favicon.ico" alt="KemProMed Logo" class="brand-logo" onerror="this.style.display='none'">
+    <div class="container">
+        <header>
+            <div class="doctor-title">Dr. Mauro Ernesto Falcón Muñoz</div>
+            <h1>KemProMed - Tech Licensing & Ecosystem Hub</h1>
+            <p>Infraestructura central de desarrollo, licenciamiento de motores de decisión, red criptográfica B2B y servicios distribuidos.</p>
+        </header>
+
+        <!-- Motores y Nodos Tecnológicos -->
+        <div class="section-title">⚡ Motores Tecnológicos Principales</div>
+        <main class="grid">
+            
+            <!-- Motor K-AURA -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>Motor K-AURA</span>
+                        <span class="badge" style="background-color: rgba(121, 40, 202, 0.2); color: #b388ff; border-color: rgba(121, 40, 202, 0.4);">Core Engine</span>
+                    </div>
+                    <p class="card-description">
+                        Sistema central de procesamiento, cálculo criptográfico y licenciamiento automatizado B2B de la arquitectura KemProMed.
+                    </p>
+                </div>
+                <a href="https://kempromed.com" class="btn btn-secondary">
+                    Acceder al Motor (K-AURA) &rarr;
+                </a>
+            </div>
+
+            <!-- KemProMed Nexus -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>KemProMed Nexus</span>
+                        <span class="badge">Clinical Node</span>
+                    </div>
+                    <p class="card-description">
+                        Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de triaje y expediente clínico.
+                    </p>
+                </div>
+                <a href="https://ai.studio/apps/30730ccc-f608-415e-9079-d36afd3c417b?fullscreenApplet=true" target="_blank" rel="noopener" class="btn btn-primary">
+                    Acceder a Nexus (MediPulse AI) &rarr;
+                </a>
+            </div>
+
+        </main>
+
+        <!-- Pasarelas de Pago y Licenciamiento -->
+        <div class="section-title">💳 Pasarelas de Pago y Servicios Empresariales</div>
+        <div class="grid">
+            
+            <!-- Pasarela Clip -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>Pagos con Tarjeta (Clip)</span>
+                        <span class="badge" style="background-color: rgba(255, 80, 0, 0.2); color: #ff8555; border-color: rgba(255, 80, 0, 0.4);">Clip MX</span>
+                    </div>
+                    <p class="card-description">
+                        Procesa pagos seguros en moneda nacional para E-Books, consultoría empresarial, licencias K-Aura y servicios KemPro Digital Solutions.
+                    </p>
+                </div>
+                <a href="https://clip.mx/@kemprodigitalsolutions" target="_blank" rel="noopener" class="btn btn-clip">
+                    Ir al Catálogo de Pagos Clip &rarr;
+                </a>
+            </div>
+
+            <!-- Nodos Cripto B2B -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>Nodos Cripto B2B</span>
+                        <span class="badge" style="background-color: rgba(0, 210, 255, 0.2); color: #00d2ff; border-color: rgba(0, 210, 255, 0.4);">Web3</span>
+                    </div>
+                    <p class="card-description">
+                        Aceptación de pagos descentralizados y licenciamiento institucional en red multimodular (BTC, ETH, USDT).
+                    </p>
+                </div>
+                <a href="https://kempromed.com" class="btn btn-secondary">
+                    Consultar Direcciones &rarr;
+                </a>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 KemPro Digital Solutions / KemProMed. Todos los derechos reservados.</p>
+        </footer>
     </div>
-    <div class="brand-author">Dr. Mauro Ernesto Falcón Muñoz</div>
-    <h1 class="brand-title">KemProMed - Tech Licensing & Ecosystem Hub</h1>
-    <p>Infraestructura central de desarrollo, licenciamiento de motores de decisión, red criptográfica B2B y servicios distribuidos.</p>
-  </header>
-
-  <main class="main-container">
-
-    <!-- SECCIÓN MOTORES PRINCIPALES (K-AURA + NEXUS AL MISMO NIVEL) -->
-    <section>
-      <div class="section-title">Motores Tecnológicos Principales</div>
-      <div class="engines-grid">
-        
-        <!-- MOTOR K-AURA (ENLACE A K-AURA-SER.ONRENDER.COM) -->
-        <article class="engine-card kaura">
-          <div>
-            <span class="badge-engine">CORE ENGINE • K-AURA</span>
-            <h3>Motor K-AURA</h3>
-            <p>
-              Sistema central de procesamiento, cálculo criptográfico y licenciamiento automatizado B2B de la arquitectura KemProMed.
-            </p>
-          </div>
-          <a href="https://k-aura-ser.onrender.com" target="_blank" class="btn-engine btn-kaura">
-            Acceder al Motor (K-AURA) &rarr;
-          </a>
-        </article>
-
-        <!-- MOTOR CLINICO NEXUS -->
-        <article class="engine-card nexus">
-          <div>
-            <span class="badge-engine">CLINICAL NODE • MEDIPULSE AI</span>
-            <h3>KemProMed Nexus</h3>
-            <p>
-              Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de triaje y expediente clínico.
-            </p>
-          </div>
-          <a href="https://nexus.kempromed.com" target="_blank" class="btn-engine btn-nexus">
-            Acceder a Nexus (MediPulse AI) &rarr;
-          </a>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- MARCADORES DE CRIPTOMONEDAS Y PAGOS DIGITALES -->
-    <section id="cripto">
-      <div class="section-title">Nodos de Pagos Cripto & Licenciamiento B2B</div>
-      <div class="crypto-box">
-        <p style="color: var(--text-muted); font-size: 0.9rem;">
-          Aceptación de pagos descentralizados y licenciamiento institucional en red multimodular.
-        </p>
-        <div class="crypto-badges">
-          <span class="crypto-tag"><span>🪙</span> Bitcoin (BTC)</span>
-          <span class="crypto-tag"><span>⚡</span> Ethereum (ETH)</span>
-          <span class="crypto-tag"><span>💵</span> Tether (USDT)</span>
-          <span class="crypto-tag"><span>🔒</span> Fiat / FIAT B2B Gateway</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIBROS, META AI RECURSOS Y MONOGRAFÍAS -->
-    <section id="libros">
-      <div class="section-title">Catálogo Digital, Libros & Recursos AI</div>
-      <div class="grid-books">
-        <div class="book-card">
-          <div>
-            <h4>Recurso Compartido Meta AI</h4>
-            <p>Enlace de consulta y documentación analítica sobre el ecosistema y desarrollo técnico de KemProMed.</p>
-          </div>
-          <a href="https://www.meta.ai/share/a/8d791a0c-f5de-410b-88f9-d4070f7935b8" target="_blank" class="btn-link">Abrir en Meta AI &rarr;</a>
-        </div>
-        <div class="book-card">
-          <div>
-            <h4>Colección Literaria & Monografías</h4>
-            <p>Acceda a los libros de investigación, publicaciones sobre transformación digital y marcos metodológicos del Dr. Mauro E. Falcón Muñoz.</p>
-          </div>
-          <a href="#contacto" class="btn-link">Ver Obras Digitales &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- MAPA DE RED E INFRAESTRUCTURA DISTRIBUIDA -->
-    <section id="mapa">
-      <div class="section-title">Mapa de Red & Infraestructura Distribuida</div>
-      <div class="map-box">
-        <p style="color: var(--text-muted); font-size: 0.9rem;">
-          Topología de nodos en tiempo real: San Luis Río Colorado, Veracruz, Quintana Roo y Tlalnepantla conectados a la red de servidores.
-        </p>
-        <div class="map-visual">
-          <div style="color: var(--primary); font-size: 1.1rem; font-weight: bold; margin-bottom: 0.25rem;">[ RED KEMPROMED NODES ]</div>
-          <div style="color: var(--text-muted); font-size: 0.8rem;">Hub Principal (kempromed.com) • K-AURA Engine • Nexus Node (nexus.kempromed.com)</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AGENDA ELECTRÓNICA DE CITAS (GOOGLE CALENDAR APP LINK) -->
-    <section id="agenda">
-      <div class="section-title">KemProMed Calendario</div>
-      <div class="agenda-box">
-        <div>
-          <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.25rem;">Agendar Cita o Revisión Técnica</h4>
-          <p style="color: var(--text-muted); font-size: 0.88rem;">Coordinación directa con el Dr. Mauro Ernesto Falcón Muñoz para licenciamiento e integración técnica.</p>
-        </div>
-        <a href="https://calendar.app.google/5g5t19o16A7pEzvD9" target="_blank" class="btn-engine btn-nexus" style="width: auto; text-align: center; text-decoration: none;">
-          Agendar en KemProMed Calendario &rarr;
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 KemProMed. Todos los derechos reservados.</p>
-    <p style="margin-top: 5px;">Titularidad y Propiedad Intelectual: Dr. Mauro Ernesto Falcón Muñoz</p>
-  </footer>
 
 </body>
 </html>
