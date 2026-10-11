@@ -15,6 +15,7 @@
             --accent-blue: #0072ff;
             --accent-purple: #7928ca;
             --accent-clip: #ff5000;
+            --accent-green: #2ea043;
         }
 
         * {
@@ -43,6 +44,28 @@
         header {
             text-align: center;
             margin-bottom: 35px;
+        }
+
+        .logo-container {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+            border: 2px solid var(--border-color);
         }
 
         .doctor-title {
@@ -116,6 +139,17 @@
             flex-grow: 1;
         }
 
+        .crypto-box {
+            background-color: #0d1117;
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            word-break: break-all;
+        }
+
         .btn {
             display: block;
             width: 100%;
@@ -135,6 +169,11 @@
 
         .btn-clip {
             background: linear-gradient(135deg, var(--accent-clip), #ff0055);
+            color: #ffffff;
+        }
+
+        .btn-green {
+            background: linear-gradient(135deg, #2ea043, #238636);
             color: #ffffff;
         }
 
@@ -170,6 +209,10 @@
 
     <div class="container">
         <header>
+            <div class="logo-container">
+                <!-- Logotipo de KemProMed / K-AURA -->
+                <div class="logo-avatar">KPM</div>
+            </div>
             <div class="doctor-title">Dr. Mauro Ernesto Falcón Muñoz</div>
             <h1>KemProMed - Tech Licensing & Ecosystem Hub</h1>
             <p>Infraestructura central de desarrollo, licenciamiento de motores de decisión, red criptográfica B2B y servicios distribuidos.</p>
@@ -190,7 +233,7 @@
                         Sistema central de procesamiento, cálculo criptográfico y licenciamiento automatizado B2B de la arquitectura KemProMed.
                     </p>
                 </div>
-                <a href="https://kempromed.com" class="btn btn-secondary">
+                <a href="https://k-aura-ser.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">
                     Acceder al Motor (K-AURA) &rarr;
                 </a>
             </div>
@@ -206,15 +249,15 @@
                         Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de triaje y expediente clínico.
                     </p>
                 </div>
-                <a href="https://ai.studio/apps/30730ccc-f608-415e-9079-d36afd3c417b?fullscreenApplet=true" target="_blank" rel="noopener" class="btn btn-primary">
+                <a href="https://aistudio.google.com" target="_blank" rel="noopener" class="btn btn-primary">
                     Acceder a Nexus (MediPulse AI) &rarr;
                 </a>
             </div>
 
         </main>
 
-        <!-- Pasarelas de Pago y Licenciamiento -->
-        <div class="section-title">💳 Pasarelas de Pago y Servicios Empresariales</div>
+        <!-- Pasarelas de Pago y Servicios Empresariales -->
+        <div class="section-title">💳 Pasarelas de Pago y Catálogo</div>
         <div class="grid">
             
             <!-- Pasarela Clip -->
@@ -228,7 +271,7 @@
                         Procesa pagos seguros en moneda nacional para E-Books, consultoría empresarial, licencias K-Aura y servicios KemPro Digital Solutions.
                     </p>
                 </div>
-                <a href="https://clip.mx/@kemprodigitalsolutions" target="_blank" rel="noopener" class="btn btn-clip">
+                <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" rel="noopener" class="btn btn-clip">
                     Ir al Catálogo de Pagos Clip &rarr;
                 </a>
             </div>
@@ -237,15 +280,57 @@
             <div class="card">
                 <div>
                     <div class="card-title">
-                        <span>Nodos Cripto B2B</span>
+                        <span>Nodos Cripto & B2B</span>
                         <span class="badge" style="background-color: rgba(0, 210, 255, 0.2); color: #00d2ff; border-color: rgba(0, 210, 255, 0.4);">Web3</span>
                     </div>
                     <p class="card-description">
-                        Aceptación de pagos descentralizados y licenciamiento institucional en red multimodular (BTC, ETH, USDT).
+                        Aceptación de pagos descentralizados y licenciamiento institucional en red multimodular.
+                    </p>
+                    <div class="crypto-box">
+                        <strong>POL/MATIC (Polygon):</strong><br>
+                        <code>0x... (Red Polygon Mainnet)</code>
+                    </div>
+                </div>
+                <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" rel="noopener" class="btn btn-secondary">
+                    Consultar Licenciamiento Cripto &rarr;
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Agenda, Citas y Contacto -->
+        <div class="section-title">📅 Agenda Médica y Contacto Directo</div>
+        <div class="grid">
+            
+            <!-- Agenda Médica -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>Gestión de Citas</span>
+                        <span class="badge">Agenda</span>
+                    </div>
+                    <p class="card-description">
+                        Reserva de consultas médicas, evaluaciones clínicas y asesorías especializadas.
                     </p>
                 </div>
-                <a href="https://kempromed.com" class="btn btn-secondary">
-                    Consultar Direcciones &rarr;
+                <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" rel="noopener" class="btn btn-green">
+                    Agendar Cita / Consulta &rarr;
+                </a>
+            </div>
+
+            <!-- Contacto WhatsApp -->
+            <div class="card">
+                <div>
+                    <div class="card-title">
+                        <span>Atención Directa</span>
+                        <span class="badge" style="background-color: rgba(35, 134, 54, 0.2); color: #3fb950; border-color: rgba(35, 134, 54, 0.4);">WhatsApp</span>
+                    </div>
+                    <p class="card-description">
+                        Canal directo de comunicación rápida, soporte técnico y atención médica.
+                    </p>
+                </div>
+                <a href="https://linkdenegocio.mx/kemprodigital" target="_blank" rel="noopener" class="btn btn-secondary">
+                    Enviar Mensaje &rarr;
                 </a>
             </div>
 
