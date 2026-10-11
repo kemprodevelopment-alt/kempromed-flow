@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KemProMed - Tech Licensing & Ecosystem Hub</title>
-  <meta name="description" content="Plataforma Central KemProMed. Infraestructura dedicada al desarrollo de software, licenciamiento tecnológico, asesorías avanzadas y distribución del ecosistema tecnológico del Dr. Mauro Ernesto Falcón Muñoz.">
+  <meta name="description" content="Plataforma Central KemProMed. Infraestructura dedicada al desarrollo de software, motor K-AURA, módulo Nexus, librería digital y agenda del Dr. Mauro Ernesto Falcón Muñoz.">
   <style>
     :root {
       --bg: #0b0f19;
@@ -14,6 +14,7 @@
       --accent: #4facfe;
       --text: #f3f4f6;
       --text-muted: #9ca3af;
+      --kaura-color: #a855f7;
     }
 
     * {
@@ -39,6 +40,15 @@
       margin-bottom: 3rem;
     }
 
+    .brand-author {
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
     .brand-title {
       font-size: 2.3rem;
       font-weight: 800;
@@ -49,24 +59,15 @@
       letter-spacing: -0.5px;
     }
 
-    .brand-author {
-      font-size: 0.9rem;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
     header p {
       color: var(--text-muted);
-      font-size: 1.05rem;
+      font-size: 1rem;
       line-height: 1.6;
     }
 
     .main-container {
       width: 100%;
-      max-width: 900px;
+      max-width: 950px;
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
@@ -76,179 +77,182 @@
       font-size: 1.3rem;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
       border-left: 3px solid var(--primary);
       padding-left: 10px;
     }
 
-    /* TARJETA DESTACADA: NEXUS */
-    .nexus-card {
-      background: linear-gradient(145deg, #111827, #0f172a);
-      border: 1px solid rgba(0, 242, 254, 0.3);
+    /* MOTORES PRINCIPALES (GRID PARALELO: K-AURA + NEXUS) */
+    .engines-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .engines-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .engine-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (min-width: 768px) {
-      .nexus-card {
-        flex-direction: row;
-      }
-    }
-
-    .nexus-preview {
-      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid var(--border);
-    }
-
-    @media (min-width: 768px) {
-      .nexus-preview {
-        width: 38%;
-        border-bottom: none;
-        border-right: 1px solid var(--border);
-      }
-    }
-
-    .nexus-icon {
-      width: 52px;
-      height: 52px;
-      background: rgba(0, 242, 254, 0.1);
-      border: 1px solid rgba(0, 242, 254, 0.4);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0.75rem;
-      color: var(--primary);
-    }
-
-    .nexus-content {
       padding: 1.75rem;
-      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
 
-    .badge {
+    .engine-card.kaura {
+      border-color: rgba(168, 85, 247, 0.4);
+    }
+
+    .engine-card.nexus {
+      border-color: rgba(0, 242, 254, 0.4);
+    }
+
+    .badge-engine {
       display: inline-block;
-      background: rgba(0, 242, 254, 0.1);
-      color: var(--primary);
-      border: 1px solid rgba(0, 242, 254, 0.3);
+      align-self: flex-start;
       padding: 4px 10px;
       border-radius: 20px;
       font-size: 0.7rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
 
-    .card-title {
-      font-size: 1.35rem;
-      font-weight: 700;
+    .kaura .badge-engine {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .nexus .badge-engine {
+      background: rgba(0, 242, 254, 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+    }
+
+    .engine-card h3 {
+      font-size: 1.4rem;
       color: #ffffff;
       margin-bottom: 0.5rem;
     }
 
-    .card-desc {
+    .engine-card p {
       color: var(--text-muted);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       line-height: 1.5;
       margin-bottom: 1.5rem;
     }
 
-    .btn-primary {
-      display: inline-flex;
+    .btn-engine {
+      display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #0b0f19;
-      font-weight: 700;
-      padding: 12px 20px;
+      padding: 12px 18px;
       border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
       text-decoration: none;
-      font-size: 0.95rem;
-      box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+      transition: opacity 0.2s ease;
     }
 
-    @media (min-width: 768px) {
-      .btn-primary {
-        width: auto;
-      }
+    .btn-kaura {
+      background: linear-gradient(135deg, #a855f7, #7c3aed);
+      color: #ffffff;
     }
 
-    /* GRID DE ACTIVOS Y LIBROS */
-    .grid-assets {
+    .btn-nexus {
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+      color: #0b0f19;
+    }
+
+    /* SECCIÓN LIBRERÍA Y LIBROS */
+    .grid-books {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.25rem;
     }
 
     @media (min-width: 768px) {
-      .grid-assets {
+      .grid-books {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    .asset-card {
+    .book-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
-    .asset-card h4 {
+    .book-card h4 {
       color: #ffffff;
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
     }
 
-    .asset-card p {
+    .book-card p {
       color: var(--text-muted);
       font-size: 0.88rem;
       line-height: 1.5;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
-    .btn-secondary {
+    .btn-link {
       color: var(--primary);
       text-decoration: none;
       font-size: 0.85rem;
       font-weight: 600;
     }
 
-    /* MOTOR DE LICENCIAMIENTO / CALCULADORA */
-    .calculator-box {
+    /* MAPA DE RED E INFRAESTRUCTURA */
+    .map-box {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 1.75rem;
+      text-align: center;
     }
 
-    .calc-row {
+    .map-visual {
+      height: 180px;
+      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      align-items: center;
+      justify-content: center;
       margin-top: 1rem;
     }
 
-    .calc-input {
-      background: #080b11;
+    /* AGENDA DE CITAS */
+    .agenda-box {
+      background: var(--card-bg);
       border: 1px solid var(--border);
-      color: #fff;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      width: 100%;
+      border-radius: 16px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .agenda-box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
     footer {
@@ -259,7 +263,7 @@
       border-top: 1px solid var(--border);
       padding-top: 2rem;
       width: 100%;
-      max-width: 900px;
+      max-width: 950px;
     }
   </style>
 </head>
@@ -268,76 +272,14 @@
   <header>
     <div class="brand-author">Dr. Mauro Ernesto Falcón Muñoz</div>
     <h1 class="brand-title">KemProMed - Tech Licensing & Ecosystem Hub</h1>
-    <p>Infraestructura dedicada al desarrollo de software, licenciamiento tecnológico, asesorías avanzadas y distribución de activos B2B de alta precisión.</p>
+    <p>Infraestructura central de desarrollo, licenciamiento de motores de decisión, producción literaria y red distribuida.</p>
   </header>
 
   <main class="main-container">
 
-    <!-- MÓDULO CLÍNICO DESTACADO: NEXUS -->
+    <!-- SECCIÓN MOTORES PRINCIPALES (K-AURA + NEXUS AL MISMO NIVEL) -->
     <section>
-      <div class="section-title">Módulo Clínico Activo</div>
-      <div class="nexus-card">
-        <div class="nexus-preview">
-          <div class="nexus-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <div style="color: var(--primary); font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;">KemProMed Nexus</div>
-          <div style="color: var(--text-muted); font-size: 0.72rem; margin-top: 2px;">MediPulse AI • Node Active</div>
-        </div>
-        <div class="nexus-content">
-          <span class="badge">FLAGSHIP CLINICAL NODE</span>
-          <h2 class="card-title">KemProMed Nexus (MediPulse AI)</h2>
-          <p class="card-desc">
-            Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de riesgo fisiológico y canalización hospitalaria de alto rendimiento.
-          </p>
-          <a href="https://nexus.kempromed.com" target="_blank" class="btn-primary">
-            Acceder al Módulo Nexus (MediPulse AI) &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIBROS Y PROPIEDAD INTELECTUAL -->
-    <section>
-      <div class="section-title">Propiedad Intelectual & Whitepapers</div>
-      <div class="grid-assets">
-        <div class="asset-card">
-          <div>
-            <h4>Publicaciones & Whitepapers Clínicos</h4>
-            <p>Monografías técnicas y marcos metodológicos desarrollados para la estandarización del expediente clínico y algoritmos de triaje.</p>
-          </div>
-          <a href="#contacto" class="btn-secondary">Solicitar Acceso B2B &rarr;</a>
-        </div>
-        <div class="asset-card">
-          <div>
-            <h4>Arquitectura Multimodal IA</h4>
-            <p>Documentación técnica sobre la integración de modelos generativos y de procesamiento de lenguaje natural en entornos médicos.</p>
-          </div>
-          <a href="#contacto" class="btn-secondary">Ver Especificación &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- MOTOR DE LICENCIAMIENTO B2B -->
-    <section id="licenciamiento">
-      <div class="section-title">Motor de Licenciamiento & Cotización</div>
-      <div class="calculator-box">
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Calcula el modelo de integración corporativa para desplegar los módulos de KemProMed en tu infraestructura hospitalaria o privada.</p>
-        <div class="calc-row">
-          <select class="calc-input">
-            <option>Seleccionar Módulo (Ej. MediPulse AI / Nexus Node)</option>
-            <option>Licencia Institucional Completa</option>
-            <option>Integración API / Interoperabilidad NOM-024</option>
-          </select>
-          <button class="btn-primary" onclick="alert('Solicitud de cotización enviada al área corporativa de KemProMed.')">Cotizar Licenciamiento</button>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 KemProMed. Todos los derechos reservados.</p>
-    <p
+      <div class="section-title">Motores Tecnológicos Principales</div>
+      <div class="engines-grid">
+        
+        <!-- MOTOR
