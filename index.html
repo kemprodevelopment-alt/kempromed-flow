@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KemProMed - Tech Licensing & Ecosystem Hub</title>
+  <title>KemProMed - Ecosystem Hub</title>
   <style>
     :root {
       --bg: #0b0f19;
@@ -19,7 +19,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
     body {
@@ -29,134 +29,167 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
     }
 
     header {
       text-align: center;
       max-width: 800px;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
+      font-weight: 800;
       background: linear-gradient(135deg, var(--primary), var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
     }
 
     header p {
       color: var(--text-muted);
       font-size: 1rem;
+      line-height: 1.5;
     }
 
     .ecosystem-container {
       width: 100%;
-      max-width: 900px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      max-width: 850px;
     }
 
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
       display: flex;
       flex-direction: column;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--primary);
+    /* Miniatura nativa basada en código SVG ligero */
+    .card-preview {
+      width: 100%;
+      height: 200px;
+      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .card-preview::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, var(--card-bg) 100%);
+    }
+
+    .preview-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+    }
+
+    .preview-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .preview-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .card-content {
+      padding: 1.75rem 1.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(0, 242, 254, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+    }
+
+    .btn-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: #00f2fe;
+      background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+      color: #0b0f19;
+      font-weight: 700;
+      padding: 14px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25);
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-action:active {
+      opacity: 0.85;
     }
 
     @media (min-width: 768px) {
       .card {
         flex-direction: row;
       }
-    }
-
-    .card-preview {
-      width: 100%;
-      min-height: 200px;
-      background: #000;
-      position: relative;
-      overflow: hidden;
-    }
-
-    @media (min-width: 768px) {
       .card-preview {
         width: 40%;
+        height: auto;
+        border-bottom: none;
+        border-right: 1px solid var(--border);
       }
-    }
-
-    .card-preview img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.85;
-      transition: opacity 0.3s ease;
-    }
-
-    .card:hover .card-preview img {
-      opacity: 1;
-    }
-
-    .card-content {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 1;
-    }
-
-    .badge {
-      align-self: flex-start;
-      background: rgba(0, 242, 254, 0.1);
-      color: var(--primary);
-      border: 1px solid rgba(0, 242, 254, 0.3);
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .card-title {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-      color: #ffffff;
-    }
-
-    .card-desc {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-    }
-
-    .btn-action {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #0b0f19;
-      font-weight: 700;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: opacity 0.2s ease;
-    }
-
-    .btn-action:hover {
-      opacity: 0.9;
+      .card-preview::after {
+        background: linear-gradient(90deg, transparent 60%, var(--card-bg) 100%);
+      }
+      .card-content {
+        width: 60%;
+        padding: 2rem;
+      }
+      .btn-action {
+        width: auto;
+        display: inline-flex;
+      }
     }
   </style>
 </head>
@@ -169,23 +202,27 @@
 
   <main class="ecosystem-container">
     <article class="card">
+      <!-- Miniatura UI Nativa (Carga al instante sin errores de pantalla negra) -->
       <div class="card-preview">
-        <!-- Miniatura generada automáticamente mediante vista previa web de Nexus -->
-        <img src="https://api.microlink.io/?url=https%3A%2F%2Fnexus.kempromed.com&screenshot=true&embed=screenshot.url" alt="Vista previa de KemProMed Nexus" loading="lazy">
+        <div class="preview-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <div class="preview-title">MediPulse AI</div>
+        <div class="preview-subtitle">Node Interface Active</div>
       </div>
+
+      <!-- Detalle y Acción -->
       <div class="card-content">
-        <div>
-          <span class="badge">Flagship Asset</span>
-          <h2 class="card-title">KemProMed Nexus (MediPulse AI)</h2>
-          <p class="card-desc">
-            Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de riesgo fisiológico y canalización hospitalaria de alto rendimiento.
-          </p>
-        </div>
-        <div>
-          <a href="https://nexus.kempromed.com" class="btn-action">
-            Acceder a Nexus (MediPulse AI) &rarr;
-          </a>
-        </div>
+        <span class="badge">FLAGSHIP ASSET</span>
+        <h2 class="card-title">KemProMed Nexus (MediPulse AI)</h2>
+        <p class="card-desc">
+          Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de riesgo fisiológico y canalización hospitalaria de alto rendimiento.
+        </p>
+        <a href="https://nexus.kempromed.com" class="btn-action">
+          Acceder a Nexus (MediPulse AI) &rarr;
+        </a>
       </div>
     </article>
   </main>
