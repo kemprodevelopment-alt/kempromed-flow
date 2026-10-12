@@ -1,355 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración Básica de Caracteres y Viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KemProMed - Tech Licensing & Ecosystem Hub</title>
-    <style>
-        :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --border-color: #30363d;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --accent-cyan: #00d2ff;
-            --accent-blue: #0072ff;
-            --accent-purple: #7928ca;
-            --accent-clip: #ff5000;
-            --accent-green: #2ea043;
-        }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+    <!-- Título de la Página -->
+    <title>KemProMed | Plataforma Central &amp; Ecosistema Tecnológico</title>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    <!-- Metaetiquetas de SEO -->
+    <meta name="description" content="KemProMed: Ecosistema digital multimodular de gobernanza Strict Zero Trust, microservicios asíncronos, salud regulada (NOM-004), Web3 (K-Aura) y soluciones B2B SaaS.">
+    <meta name="keywords" content="KemProMed, K-Aura, KemProMed Nexus, B2B, SaaS, Zero Trust, NOM-004, Telemedicina, Entropía de Shannon, Cadenas de Markov, Web3, Microservicios">
+    <meta name="author" content="Dr. Mauro Ernesto Falcón Muñoz">
+    <meta name="robots" content="index, follow">
 
-        .container {
-            max-width: 850px;
-            width: 100%;
-        }
+    <!-- Metaetiquetas Open Graph (Redes Sociales y Enlaces) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KemProMed | Plataforma Central &amp; Ecosistema Tecnológico">
+    <meta property="og:description" content="Ecosistema digital multimodular e infraestructura tecnológica de análisis predictivo, gobernanza y salud regulada.">
+    <meta property="og:url" content="https://kempromed.com/">
+    <meta property="og:site_name" content="KemProMed">
 
-        header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
+    <!-- Código Oficial de Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7035534382544396"
+         crossorigin="anonymous"></script>
 
-        .logo-container {
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #fff;
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
-            border: 2px solid var(--border-color);
-        }
-
-        .doctor-title {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            color: var(--accent-cyan);
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-        }
-
-        .section-title {
-            font-size: 1.2rem;
-            color: var(--text-primary);
-            margin: 30px 0 15px 0;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 22px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-cyan);
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .card-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .contact-info {
-            background-color: #0d1117;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .contact-info p {
-            margin-bottom: 8px;
-        }
-
-        .contact-info a {
-            color: var(--accent-cyan);
-            text-decoration: none;
-        }
-
-        .btn {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 12px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: opacity 0.2s ease;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            color: #ffffff;
-        }
-
-        .btn-clip {
-            background: linear-gradient(135deg, var(--accent-clip), #ff0055);
-            color: #ffffff;
-        }
-
-        .btn-green {
-            background: linear-gradient(135deg, #2ea043, #238636);
-            color: #ffffff;
-        }
-
-        .btn-purple {
-            background: linear-gradient(135deg, var(--accent-purple), #58a6ff);
-            color: #ffffff;
-        }
-
-        .btn-secondary {
-            background-color: #21262d;
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        .badge {
-            padding: 2px 8px;
-            font-size: 0.7rem;
-            border-radius: 12px;
-            background-color: rgba(46, 160, 67, 0.2);
-            color: #3fb950;
-            border: 1px solid rgba(46, 160, 67, 0.4);
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-    </style>
+    <!-- Framework de Estilos (Tailwind CSS CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col justify-between">
 
-    <div class="container">
-        <header>
-            <div class="logo-container">
-                <div class="logo-avatar">KPM</div>
-            </div>
-            <div class="doctor-title">Dr. Mauro Ernesto Falcón Muñoz</div>
-            <h1>KemProMed - Tech Licensing & Ecosystem Hub</h1>
-            <p>Infraestructura central de desarrollo, licenciamiento de motores de decisión, red criptográfica B2B y servicios distribuidos.</p>
-        </header>
-
-        <!-- Motores y Nodos Tecnológicos -->
-        <div class="section-title">⚡ Motores Tecnológicos Principales</div>
-        <main class="grid">
-            
-            <!-- Motor K-AURA -->
-            <div class="card">
+    <!-- Encabezado / Navegación principal -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-blue-500/20">K</div>
                 <div>
-                    <div class="card-title">
-                        <span>Motor K-AURA</span>
-                        <span class="badge" style="background-color: rgba(121, 40, 202, 0.2); color: #b388ff; border-color: rgba(121, 40, 202, 0.4);">Core Engine</span>
-                    </div>
-                    <p class="card-description">
-                        Sistema central de procesamiento, cálculo criptográfico y licenciamiento automatizado B2B de la arquitectura KemProMed.
-                    </p>
+                    <span class="text-xl font-bold tracking-tight text-white">KemProMed</span>
+                    <span class="text-xs text-blue-400 block font-mono">Plataforma Central</span>
                 </div>
-                <a href="https://k-aura-ser.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">
-                    Acceder al Motor (K-AURA) &rarr;
-                </a>
             </div>
-
-            <!-- KemProMed Nexus -->
-            <div class="card">
-                <div>
-                    <div class="card-title">
-                        <span>KemProMed Nexus</span>
-                        <span class="badge">Clinical Node</span>
-                    </div>
-                    <p class="card-description">
-                        Motor de decisión clínica e interoperabilidad normada (NOM-004/NOM-024). Algoritmos predictivos de triaje y expediente clínico.
-                    </p>
-                </div>
-                <a href="https://ai.studio/apps/30730ccc-f608-415e-9079-d36afd3c417b?fullscreenApplet=true" target="_blank" rel="noopener" class="btn btn-primary">
-                    Acceder a Nexus (MediPulse AI) &rarr;
-                </a>
-            </div>
-
-        </main>
-
-        <!-- Pasarelas de Pago y Publicaciones -->
-        <div class="section-title">💳 Pasarelas de Pago y Publicaciones</div>
-        <div class="grid">
-            
-            <!-- Pasarela Clip -->
-            <div class="card">
-                <div>
-                    <div class="card-title">
-                        <span>Pagos con Tarjeta (Clip)</span>
-                        <span class="badge" style="background-color: rgba(255, 80, 0, 0.2); color: #ff8555; border-color: rgba(255, 80, 0, 0.4);">Clip MX</span>
-                    </div>
-                    <p class="card-description">
-                        Ingresa el monto y concepto para realizar tu pago de forma segura por medio de Clip (E-Books, Asesoria empresarial, Licencias K-Aura).
-                    </p>
-                </div>
-                <a href="https://clip.mx/@kemprodigitalsolutions" target="_blank" rel="noopener" class="btn btn-clip">
-                    Pagar con Clip &rarr;
-                </a>
-            </div>
-
-            <!-- Libros y Publicaciones Meta AI -->
-            <div class="card">
-                <div>
-                    <div class="card-title">
-                        <span>Libros & E-Books</span>
-                        <span class="badge" style="background-color: rgba(121, 40, 202, 0.2); color: #b388ff; border-color: rgba(121, 40, 202, 0.4);">Meta AI</span>
-                    </div>
-                    <p class="card-description">
-                        Acceso a la biblioteca de publicaciones clínicas, investigación tecnológica y material académico especializado.
-                    </p>
-                </div>
-                <a href="https://meta.ai/share/a/8d791a0c-f5de-410b-88f9-d4070f7935b8" target="_blank" rel="noopener" class="btn btn-purple">
-                    Ver Libros y Publicaciones &rarr;
-                </a>
-            </div>
-
+            <nav class="hidden md:flex space-x-6 text-sm text-slate-400">
+                <a href="#ecosistema" class="hover:text-white transition-colors">Ecosistema</a>
+                <a href="#motores" class="hover:text-white transition-colors">Motores Core</a>
+                <a href="#divisiones" class="hover:text-white transition-colors">Divisiones</a>
+                <a href="#cobertura" class="hover:text-white transition-colors">Cobertura</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Agenda Médica y Contacto Directo -->
-        <div class="section-title">📅 Agenda Médica y Contacto Directo</div>
-        <div class="grid">
+    <!-- Contenido Principal -->
+    <main class="max-w-7xl mx-auto px-6 py-12 flex-grow space-y-16">
+        
+        <!-- Hero Section / Hub Central -->
+        <section class="text-center max-w-3xl mx-auto space-y-6">
+            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full text-xs font-semibold tracking-wide uppercase">
+                Gobernanza Strict Zero Trust &amp; Soberanía de Código
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Ecosistema Digital Multimodular e Infraestructura Tecnológica
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg">
+                Plataforma central y directriz para el desarrollo de software, licenciamiento tecnológico, microservicios asíncronos y optimización mediante cálculo de entropía de Shannon y cadenas de Markov.
+            </p>
+        </section>
+
+        <!-- Motores Principales (K-Aura & KemProMed Nexus) -->
+        <section id="motores" class="space-y-6">
+            <h2 class="text-2xl font-bold text-white text-center">Motores Principales de Impacto</h2>
             
-            <!-- Agenda Médica Google Calendar -->
-            <div class="card">
-                <div>
-                    <div class="card-title">
-                        <span>KemProMed Calendario</span>
-                        <span class="badge">Google Calendar</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 1. K-AURA -->
+                <div class="bg-slate-800/50 border border-slate-700/60 rounded-2xl p-6 hover:border-purple-500/50 transition-colors">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">1. K-AURA</h3>
+                        <span class="text-xs bg-purple-500/10 text-purple-400 border border-purple-500/20 px-2.5 py-1 rounded-full font-mono">SaaS / Web3 / FinTech</span>
                     </div>
-                    <p class="card-description">
-                        Reserva de consultas médicas, evaluaciones clínicas y asesorías tecnológicas de forma directa.
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Motor inteligente central de monitorización de blockchain determinista. Diseñado bajo esquemas SaaS y B2B con lógica de ejecución automática para gestión de criptomonedas (Gatillos Take Profit &amp; Stop Loss).
                     </p>
                 </div>
-                <a href="https://calendar.app.google/5g5t19o16A7pEzvD9" target="_blank" rel="noopener" class="btn btn-green">
-                    Agendar Cita en Calendario &rarr;
-                </a>
-            </div>
 
-            <!-- Contacto Oficial -->
-            <div class="card">
-                <div>
-                    <div class="card-title">
-                        <span>Atención Directa</span>
-                        <span class="badge" style="background-color: rgba(35, 134, 54, 0.2); color: #3fb950; border-color: rgba(35, 134, 54, 0.4);">Oficial</span>
+                <!-- 2. KemProMed Nexus -->
+                <div class="bg-slate-800/50 border border-slate-700/60 rounded-2xl p-6 hover:border-emerald-500/50 transition-colors">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">2. KemProMed Nexus</h3>
+                        <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-full font-mono">HealthTech / NOM-004</span>
                     </div>
-                    <div class="contact-info">
-                        <p>✉️ <strong>Email:</strong> <a href="mailto:direccion@kempromed.com">direccion@kempromed.com</a></p>
-                        <p>🇲🇽 <strong>Tel MX:</strong> <a href="https://wa.me/526531552063" target="_blank">+52 (653) 155-2063</a></p>
-                        <p>🇺🇸 <strong>Tel US:</strong> <a href="tel:+16617508599">+1 (661) 750-8599</a></p>
-                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Plataforma de telemedicina y expediente clínico electrónico alineada a la NOM-004 y regulaciones vigentes en México. Integra análisis predictivo probabilístico y firma digital inalterable.
+                    </p>
                 </div>
-                <a href="https://wa.me/526531552063" target="_blank" rel="noopener" class="btn btn-secondary">
-                    Enviar WhatsApp Directo &rarr;
-                </a>
             </div>
+        </section>
 
+        <!-- Divisiones e Infraestructura Integrada -->
+        <section id="divisiones" class="space-y-6">
+            <h2 class="text-2xl font-bold text-white text-center">Divisiones y Servicios del Ecosistema</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- KemProMed Studio -->
+                <div class="bg-slate-800/30 border border-slate-700/40 rounded-xl p-5">
+                    <h4 class="text-lg font-semibold text-blue-400 mb-2">KemProMed Studio</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Desarrollo de aplicaciones personalizadas, IA &amp; App Development, simulación industrial y diseño de modelos de negocio basados en Inteligencia Artificial.
+                    </p>
+                </div>
+
+                <!-- Red de Servicios Médicos -->
+                <div class="bg-slate-800/30 border border-slate-700/40 rounded-xl p-5">
+                    <h4 class="text-lg font-semibold text-blue-400 mb-2">Red de Servicios Médicos</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Plataforma global para consultas en línea, diagnóstico oportuno, agendas independientes, análisis de laboratorio y programas preventivos de alta gama.
+                    </p>
+                </div>
+
+                <!-- KemProMed.Edu / Academia -->
+                <div class="bg-slate-800/30 border border-slate-700/40 rounded-xl p-5">
+                    <h4 class="text-lg font-semibold text-blue-400 mb-2">KemProMed.Edu &amp; Catálogo</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Infraestructura dedicada a la divulgación de material técnico, infoproductos con pasarelas de pago, arquitectura de software y legislatura médica.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pilares de Impacto Tecnológico -->
+        <section class="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-8 space-y-6">
+            <h2 class="text-xl font-bold text-white">Impacto Tecnológico e Industrial</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
+                <div>
+                    <h3 class="font-bold text-white text-sm mb-1">• Simulación y Entropía Controlada</h3>
+                    <p class="text-slate-400">Digitalización integral enfocada en la reducción de hasta un 40% en desperdicios operativos industriales mediante interconexión de datos.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-sm mb-1">• IA de Proximidad</h3>
+                    <p class="text-slate-400">Automatización y agentes de IA adaptados a comercios y clínicas locales para competir con estándares globales.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-sm mb-1">• Blindaje Zero Trust</h3>
+                    <p class="text-slate-400">Esquemas de seguridad estructurada para garantizar escalabilidad, soberanía de código y rentabilidad comercial.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cobertura Geográfica -->
+        <section id="cobertura" class="text-center space-y-2">
+            <p class="text-xs text-slate-500 uppercase tracking-widest font-mono">Presencia y Área de Influencia</p>
+            <p class="text-sm font-medium text-slate-300">
+                San Luis Río Colorado • Veracruz • Quintana Roo • Tlalnepantla
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página / Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 space-y-4 sm:space-y-0">
+            <div>
+                <p>&copy; 2026 KemProMed. Todos los derechos reservados.</p>
+                <p class="mt-1">Titular de Derechos y Propiedad Intelectual: <strong class="text-slate-400">Dr. Mauro Ernesto Falcón Muñoz</strong></p>
+            </div>
+            <div class="text-right font-mono text-[11px] text-slate-600">
+                <span>kempromed.com • Central Hub</span>
+            </div>
         </div>
-
-        <footer>
-            <p>&copy; 2026 KemPro Digital Solutions / KemProMed. Todos los derechos reservados.</p>
-        </footer>
-    </div>
+    </footer>
 
 </body>
 </html>
