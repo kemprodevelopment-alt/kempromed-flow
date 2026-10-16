@@ -23,12 +23,12 @@
 }
 </style>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KemProMed - Infraestructura Multidisciplinaria B2B</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KemProMed - Hub Multidisciplinario + eBook Compra</title>
 <style>
-:root{--bg:#060A16;--card:#111A2E;--card2:#131F38;--b:#1E293B;--b2:#23365F;--cyan:#00E5B8;--blue:#4F7CFF;--pink:#FF2E6A;--green:#22E584;--yellow:#FFC857;--purple:#A78BFA;--w:#F8FAFF;--g:#8A9BB8;--g2:#5C6C8A}
-*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,sans-serif}
-body{background:radial-gradient(900px 500px at 15% -10%, rgba(0,229,184,.10), transparent), radial-gradient(900px 500px at 85% 0%, rgba(167,139,250,.10), transparent), var(--bg); color:var(--w); line-height:1.6}
+:root{--bg:#060A16;--card:#111A2E;--b:#1E293B;--b2:#23365F;--cyan:#00E5B8;--blue:#4F7CFF;--pink:#FF2E6A;--green:#22E584;--yellow:#FFC857;--purple:#A78BFA;--w:#F8FAFF;--g:#8A9BB8;--g2:#5C6C8A}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui}
+body{background:var(--bg);color:var(--w);line-height:1.6}
 a{text-decoration:none}
 .top{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(6,10,22,.9);border-bottom:1px solid var(--b);padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
 .brand{font-weight:800;display:flex;gap:10px;align-items:center}
@@ -40,36 +40,34 @@ a{text-decoration:none}
 @media(max-width:900px){.hero{grid-template-columns:1fr}}
 .kicker{color:var(--g2);font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:8px}
 .kicker b{color:var(--cyan)}
-.h1{font-size:36px;line-height:.95;font-weight:800;letter-spacing:-1.1px}
-@media(max-width:600px){.h1{font-size:28px}}
+.h1{font-size:34px;line-height:.95;font-weight:800;letter-spacing:-1px}
 .h1 span{background:linear-gradient(90deg,var(--cyan),var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{color:var(--g);font-size:13px;margin-top:10px;max-width:540px;line-height:1.6}
+.sub{color:var(--g);font-size:13px;margin-top:10px;max-width:540px}
 .multi{margin-top:14px;display:flex;gap:6px;flex-wrap:wrap}
 .chip{border:1px solid var(--b);background:rgba(17,26,46,.85);border-radius:999px;padding:5px 10px;font-size:10.5px;color:var(--g)}
 .chip b{color:var(--w)}
 .ref{margin-top:12px;font-size:11px;color:var(--g2);border-left:2px solid var(--b2);padding-left:10px}
 .video{background:linear-gradient(180deg,#131F38,var(--card));border:1px solid var(--b);border-radius:16px;overflow:hidden}
-.vph{aspect-ratio:16/9;display:grid;place-items:center;color:var(--g);font-size:11px;text-align:center;padding:14px;background:radial-gradient(400px 200px at 50% 30%, rgba(0,229,184,.12), transparent), rgba(0,0,0,.2)}
 .grid{max-width:1180px;margin:0 auto;padding:12px 20px 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
-.card{background:linear-gradient(180deg,var(--card),#0B1122);border:1px solid var(--b);border-radius:16px;padding:18px;transition:.22s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.card::before{content:"";position:absolute;top:-40px;right:-40px;width:100px;height:100px;background:radial-gradient(circle, var(--glow, rgba(0,229,184,.10)), transparent 70%)}
+.card{background:linear-gradient(180deg,var(--card),#0B1122);border:1px solid var(--b);border-radius:16px;padding:18px;display:flex;flex-direction:column;position:relative;overflow:hidden}
 .card:hover{border-color:var(--b2);transform:translateY(-2px)}
-.toprow{display:flex;justify-content:space-between;margin-bottom:8px;position:relative;z-index:1}
+.toprow{display:flex;justify-content:space-between;margin-bottom:8px}
 .icon{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;font-size:16px}
-.badge{font-size:9px;font-weight:800;padding:3px 8px;border-radius:999px;border:1px solid;letter-spacing:.4px}
-.title{font-weight:800;font-size:14px;margin-bottom:2px;position:relative;z-index:1}
-.subtitle{font-size:11px;color:var(--g);font-weight:500;margin-bottom:6px;position:relative;z-index:1}
-.desc{font-size:11.5px;color:var(--g);margin-bottom:10px;flex:1;line-height:1.5;position:relative;z-index:1}
-.unicef{font-size:10px;color:var(--yellow);background:rgba(255,200,87,.08);border:1px solid rgba(255,200,87,.2);border-radius:8px;padding:6px 8px;margin-bottom:8px;display:flex;gap:6px;align-items:center;position:relative;z-index:1}
-.btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;position:relative;z-index:1}
+.badge{font-size:9px;font-weight:800;padding:3px 8px;border-radius:999px;border:1px solid}
+.title{font-weight:800;font-size:14px;margin-bottom:2px}
+.subtitle{font-size:11px;color:var(--g);font-weight:500;margin-bottom:6px}
+.desc{font-size:11.5px;color:var(--g);margin-bottom:10px;flex:1;line-height:1.5}
+.unicef{font-size:10px;color:var(--yellow);background:rgba(255,200,87,.08);border:1px solid rgba(255,200,87,.2);border-radius:8px;padding:6px 8px;margin-bottom:8px;display:flex;gap:6px;align-items:center}
+.btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
 .btn{flex:1;min-width:90px;padding:8px 8px;border-radius:8px;font-size:10.5px;font-weight:700;text-align:center;display:flex;justify-content:center}
 .btn-p{background:var(--w);color:#060A16}
 .btn-g{border:1px solid var(--b2);color:var(--cyan);background:rgba(0,229,184,.06)}
 .btn-clip{background:linear-gradient(90deg,#FF2E6A,#FF5A8A);color:#fff}
 .btn-wa{background:linear-gradient(90deg,#22E584,#00D26A);color:#05210F}
 .btn-book{background:linear-gradient(90deg,#FFC857,#FFD98A);color:#231B00}
+.btn-gold{background:linear-gradient(90deg,#D4AF37,#f5d76e);color:#000}
 footer{max-width:1180px;margin:24px auto 0;padding:14px 20px;border-top:1px solid var(--b);font-size:11px;color:var(--g2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 </style>
 </head>
@@ -79,7 +77,7 @@ footer{max-width:1180px;margin:24px auto 0;padding:14px 20px;border-top:1px soli
   <div class="nav">
     <a href="#modulos">MÓDULOS</a>
     <a href="https://calendar.app.google/YzqLVbLpqtZyvzX78" target="_blank">Agenda</a>
-    <a class="cta" href="#investors">Investors →</a>
+    <a class="cta" href="#libros">Libros →</a>
   </div>
 </div>
 
@@ -87,7 +85,7 @@ footer{max-width:1180px;margin:24px auto 0;padding:14px 20px;border-top:1px soli
   <div>
     <div class="kicker">INFRAESTRUCTURA TECNOLÓGICA <b>FINANCIERA • EDUCATIVA • INDUSTRIAL • SALUD</b></div>
     <div class="h1">KemProMed<br>Flujos de datos en<br><span>tiempo real y terminales<br>de alta disponibilidad</span></div>
-    <div class="sub">Infraestructura tecnológica y financiera que opera con flujos de datos en tiempo real y terminales de alta disponibilidad. 99.99% UPTIME. Finanzas con criptomonedas, educación con clases de idiomas gratuitas para la infancia, industria optimizando recursos, y eBooks con el know-how de cómo se logró.</div>
+    <div class="sub">Infraestructura tecnológica y financiera que opera con flujos de datos en tiempo real y terminales de alta disponibilidad. 99.99% UPTIME. Finanzas con criptomonedas, educación con clases de idiomas gratuitas para la infancia por acuerdo UNICEF 2014, industria optimizando recursos, y eBooks con el know-how de cómo se logró.</div>
     <div class="multi">
       <div class="chip"><b>Finanzas:</b> Cripto • Polygon • 1M+ req/s</div>
       <div class="chip"><b>Educación:</b> UNICEF 2014 • Idiomas infancia gratis</div>
@@ -95,95 +93,92 @@ footer{max-width:1180px;margin:24px auto 0;padding:14px 20px;border-top:1px soli
       <div class="chip"><b>eBooks:</b> Know-how • Cómo se logró</div>
       <div class="chip"><b>Pagos:</b> Clip + Agenda automática</div>
     </div>
-    <div class="ref">Infraestructura titular: Dr. Mauro E. Falcón Muñoz (ref.) • KemPro Digital Solutions • SLRC Sonora • 99.99% UPTIME • Engine 100% Operativo</div>
+    <div class="ref">Infraestructura titular: Dr. Mauro E. Falcón Muñoz (ref.) • KemPro Digital Solutions • SLRC Sonora • 99.99% UPTIME</div>
   </div>
   <div class="video">
-    <div class="vph">
+    <div style="aspect-ratio:16/9;background:#000;display:grid;place-items:center;color:var(--g);font-size:11px;text-align:center;padding:14px">
       <div>
-        <div style="font-size:26px;margin-bottom:6px">🌐</div>
-        <b style="color:var(--w);font-size:12px">KemProMed - Infraestructura Multidisciplinaria</b><br>
-        Finanzas • Educación • Industria • eBooks • Pagos<br>
-        Flujos en tiempo real • Terminales alta disponibilidad<br>
-        99.99% UPTIME • 1M+ solicitudes/seg<br><br>
-        <span style="font-size:10px;background:rgba(255,255,255,.08);padding:4px 8px;border-radius:6px">Video: /assets/kempromed-multidisciplinario.mp4</span>
+        <div style="font-size:26px;margin-bottom:6px">▶️</div>
+        <b style="color:var(--w);font-size:12px">KemProMed - 40s Multidisciplinario</b><br>
+        Finanzas • Educación UNICEF • Industria • eBooks • Pagos<br>
+        Video: /assets/kempromed-40s.mp4<br><br>
+        <span style="font-size:10px;background:rgba(255,255,255,.08);padding:4px 8px;border-radius:6px">Reemplaza con tu MP4 de 40s</span>
       </div>
     </div>
-    <div style="padding:8px 12px;display:flex;justify-content:space-between;font-size:10px;color:var(--g)"><span>▶ Infraestructura financiera y tecnológica B2B</span><span style="color:var(--cyan)">Polygon • UNICEF • Clip</span></div>
+    <div style="padding:8px 12px;display:flex;justify-content:space-between;font-size:10px;color:var(--g)"><span>▶ 40s • Infraestructura multidisciplinaria</span><span style="color:var(--cyan)">Polygon • UNICEF • Clip</span></div>
   </div>
 </div>
 
 <div class="grid" id="modulos">
 
-  <div class="card" style="--glow:rgba(0,229,184,.14)">
+  <div class="card">
     <div class="toprow"><div class="icon" style="background:rgba(0,229,184,.12);border:1px solid rgba(0,229,184,.25)">💰</div><div class="badge" style="color:var(--cyan);background:rgba(0,229,184,.1);border-color:rgba(0,229,184,.25)">FINANZAS</div></div>
     <div class="title">Motor K-AURA</div>
     <div class="subtitle">Criptomonedas y finanzas descentralizadas</div>
-    <div class="desc">Flujos de datos en tiempo real y terminales de alta disponibilidad. Cálculo criptográfico, licenciamiento automatizado y Smart Contracts en Polygon. Rendimiento: 1.2M, 1M+ solicitudes/seg.</div>
+    <div class="desc">Flujos de datos en tiempo real y terminales de alta disponibilidad. Cálculo criptográfico y Smart Contracts en Polygon. 1M+ solicitudes/seg.</div>
     <div class="btns"><a class="btn btn-p" href="https://k-aura-ser.onrender.com" target="_blank">Motor →</a><a class="btn btn-g" href="https://k-aura-ser.onrender.com/docs" target="_blank">📄 API</a></div>
   </div>
 
-  <div class="card" style="--glow:rgba(255,200,87,.16)">
+  <div class="card">
     <div class="toprow"><div class="icon" style="background:rgba(255,200,87,.15);border:1px solid rgba(255,200,87,.3)">🌍</div><div class="badge" style="color:var(--yellow);background:rgba(255,200,87,.1);border-color:rgba(255,200,87,.25)">EDUCACIÓN</div></div>
     <div class="title">K-Pro-Educación</div>
     <div class="subtitle">Clases de idiomas gratuitas para la infancia</div>
-    <div class="desc">Programa con acuerdo UNICEF 2014. Tutor interactivo con evaluación adaptativa, ejercicios automatizados y acceso gratuito para niños y niñas.</div>
+    <div class="desc">Programa con acuerdo UNICEF 2014. Tutor interactivo con evaluación adaptativa y acceso gratuito para niños y niñas.</div>
     <div class="unicef">💙 Acuerdo UNICEF 2014 • Educación gratuita para la infancia</div>
     <div class="btns"><a class="btn btn-p" href="https://ai.studio/apps/0c6b80f6-0f6e-491a-bf8f-4f1db316e016" target="_blank">Clases Gratis ↗</a><a class="btn btn-g" href="https://wa.me/526531552063?text=Solicito%20info%20UNICEF%20K-Pro" target="_blank">📄 Acuerdo</a></div>
   </div>
 
-  <div class="card" style="--glow:rgba(79,124,255,.14)">
+  <div class="card">
     <div class="toprow"><div class="icon" style="background:rgba(79,124,255,.15);border:1px solid rgba(79,124,255,.3)">🏭</div><div class="badge" style="color:#7FA1FF;background:rgba(79,124,255,.12);border-color:rgba(79,124,255,.25)">INDUSTRIA</div></div>
     <div class="title">KemProMed-Flow</div>
     <div class="subtitle">Disminuir mermas y optimizar recursos</div>
-    <div class="desc">Diagnóstico de flujos, detección de cuellos de botella y simulación operativa. Optimización real de recursos para industria y servicios.</div>
-    <div class="btns"><a class="btn btn-p" href="https://ai.studio/apps/b0d5223e-79c2-4a6a-b7ac-3debb048d9c2" target="_blank">Optimizar ↗</a><a class="btn btn-g" href="https://wa.me/526531552063?text=Solicito%20casos%20optimizacion%20Flow" target="_blank">📄 Casos</a></div>
+    <div class="desc">Diagnóstico de flujos, detección de cuellos de botella y simulación operativa. Optimización real de recursos.</div>
+    <div class="btns"><a class="btn btn-p" href="https://ai.studio/apps/b0d5223e-79c2-4a6a-b7ac-3debb048d9c2" target="_blank">Optimizar ↗</a><a class="btn btn-g" href="https://wa.me/526531552063?text=Solicito%20casos%20optimizacion" target="_blank">📄 Casos</a></div>
   </div>
 
-  <div class="card" style="--glow:rgba(79,124,255,.10)">
+  <div class="card">
     <div class="toprow"><div class="icon" style="background:rgba(79,124,255,.12);border:1px solid rgba(79,124,255,.25)">🏥</div><div class="badge" style="color:var(--g);background:rgba(255,255,255,.06);border-color:var(--b)">SALUD • NODO</div></div>
     <div class="title">KemProMed Nexus</div>
     <div class="subtitle">Telemedicina y motor clínico</div>
-    <div class="desc">Motor de decisión con triaje NEWS2 y expediente normado NOM-004/NOM-024. Parte del ecosistema multidisciplinario.</div>
+    <div class="desc">Motor de decisión con triaje NEWS2 y expediente normado NOM-004/NOM-024. Parte del ecosistema.</div>
     <div class="btns"><a class="btn btn-p" href="https://ai.studio/apps/30730ccc-f608-415e-9079-d36afd3c417b" target="_blank">Nexus →</a><a class="btn btn-g" href="https://wa.me/526531552063?text=Solicito%20dossier" target="_blank">📄 Dossier</a></div>
   </div>
 
-  <div class="card" style="--glow:rgba(255,200,87,.16)">
-    <div class="toprow"><div class="icon" style="background:rgba(255,200,87,.15);border:1px solid rgba(255,200,87,.3)">📖</div><div class="badge" style="color:var(--yellow);background:rgba(255,200,87,.1);border-color:rgba(255,200,87,.25)">E-BOOKS</div></div>
-    <div class="title">Libros & E-Books</div>
-    <div class="subtitle">Cómo logré construir esta infraestructura</div>
-    <div class="desc">El know-how completo: cómo se unieron finanzas, educación, industria y salud en una sola infraestructura B2B operativa al 99.99%.</div>
-    <div class="btns"><a class="btn btn-book" href="https://wa.me/526531552063?text=Solicito%20ebooks%20como%20logre%20todo" target="_blank">Ver cómo se logró →</a></div>
+  <div class="card" id="libros" style="border-color:rgba(212,175,55,.35)">
+    <div class="toprow"><div class="icon" style="background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.3)">📖</div><div class="badge" style="color:#D4AF37;background:rgba(212,175,55,.12);border-color:rgba(212,175,55,.25)">E-BOOKS • $37 USD</div></div>
+    <div class="title">Tom & Alx Space</div>
+    <div class="subtitle">Del Rechazo a la Resiliencia - Mecanismos Reales</div>
+    <div class="desc">No es amarillismo. Es el blueprint técnico de cómo convertí mil rechazos en infraestructura B2B. Hub, Nexus, K-AURA y Clip desplegados. Cómo logré todo.</div>
+    <div style="background:#000;padding:8px 10px;border-radius:8px;border:1px dashed #333;margin-bottom:8px">
+      <div style="font-size:10px;color:#D4AF37;font-weight:800">🔒 Desbloqueas por $37 USD:</div>
+      <div style="font-size:10px;color:#999;line-height:1.5">• Sistema K-AURA + Q-Engine<br>• Código Node.js / Polygon<br>• Playbook Clip CLABE<br>• Plantilla dossier $1M MXN<br>• Disclaimer NOM-004/NOM-024</div>
+    </div>
+    <div style="background:#111;padding:8px;border-radius:8px;border:1px solid #222;margin-bottom:8px">
+      <div style="font-size:10px;color:var(--g2)">💳 SPEI Clip</div>
+      <div style="font-family:monospace;font-size:11px;color:#fff">730969200011330860<br><span style="font-size:10px;color:var(--g2)">Vicente Perez Lopez • Concepto: TomAlxSpace</span></div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-gold" href="https://clip.mx/@kemprodigitalsolutions" target="_blank">Comprar $37 USD →</a>
+      <a class="btn btn-book" href="https://wa.me/526531552063?text=Solicito%20ebook%20Tom%20Alx%20Space%20Del%20Rechazo%20a%20la%20Resiliencia%20-%20CLABE%20730969200011330860" target="_blank">WhatsApp</a>
+    </div>
+    <div class="btns" style="margin-top:6px">
+      <a class="btn btn-p" href="https://calendar.app.google/YzqLVbLpqtZyvzX78" target="_blank" style="width:100%">Agendar para desbloqueo</a>
+    </div>
   </div>
 
-  <div class="card" style="--glow:rgba(34,229,132,.14)">
+  <div class="card">
     <div class="toprow"><div class="icon" style="background:rgba(34,229,132,.12);border:1px solid rgba(34,229,132,.25)">⚡</div><div class="badge" style="color:var(--green);background:rgba(34,229,132,.1);border-color:rgba(34,229,132,.25)">PAGOS • AGENDAS</div></div>
     <div class="title">Pasarelas & Agendas</div>
     <div class="subtitle">Pagos y agendas automáticas</div>
-    <div class="desc">Clip para pagos seguros + Google Calendar para agendas automáticas. Flujo completo sin fricción para todos los módulos.</div>
+    <div class="desc">Clip para pagos seguros + Google Calendar para agendas automáticas. Flujo completo sin fricción. Concepto: TomAlxSpace.</div>
     <div class="btns"><a class="btn btn-clip" href="https://clip.mx/@kemprodigitalsolutions" target="_blank">Clip →</a><a class="btn btn-p" href="https://calendar.app.google/YzqLVbLpqtZyvzX78" target="_blank">Agenda Auto →</a></div>
   </div>
 
 </div>
 
-<div class="grid" style="padding-top:0;grid-template-columns:1fr">
-  <div class="card" style="background:linear-gradient(100deg,#111A2E,#0F1E3A);border-color:var(--b2);">
-    <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:16px">
-      <div>
-        <div style="font-size:11px;color:var(--g2);letter-spacing:1px;font-weight:700;margin-bottom:6px">INFRAESTRUCTURA MULTIDISCIPLINARIA B2B • 99.99% UPTIME</div>
-        <div style="font-size:18px;font-weight:800;line-height:1.1">Finanzas, Educación, Industria, Salud y<br><span style="color:var(--cyan)">Pagos con Agendas Automáticas</span></div>
-        <div style="font-size:11px;color:var(--g);margin-top:6px">Flujos de datos en tiempo real, terminales de alta disponibilidad, impacto tecnológico medible. Desde criptomonedas hasta clases gratuitas para la infancia por acuerdo UNICEF 2014, optimización industrial y eBooks con el know-how.</div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:6px;justify-content:center">
-        <a class="btn btn-p" href="mailto:direccion@kempromed.com?subject=KemProMed%20Multidisciplinario" style="width:100%">Contacto →</a>
-        <a class="btn btn-g" href="https://calendar.app.google/YzqLVbLpqtZyvzX78" target="_blank" style="width:100%">Agendar Automático</a>
-      </div>
-    </div>
-  </div>
-</div>
-
 <footer>
-  <div>© 2026 KemPro Digital Solutions / KemProMed • Finanzas • Educación UNICEF 2014 • Industria • eBooks • Pagos Automáticos<br>Infraestructura titular (ref.): Dr. Mauro E. Falcón Muñoz • SLRC Sonora • direccion@kempromed.com • 99.99% UPTIME</div>
-  <div style="display:flex;gap:10px"><a href="https://calendar.app.google/YzqLVbLpqtZyvzX78" style="color:var(--g)">Agenda Auto</a></div>
+  <div>© 2026 KemPro Digital Solutions / KemProMed • Finanzas • Educación UNICEF 2014 • Industria • eBooks $37 USD • Pagos Automáticos<br>Infraestructura titular (ref.): Dr. Mauro E. Falcón Muñoz • SLRC Sonora • direccion@kempromed.com • CLABE 730969200011330860</div>
+  <div style="display:flex;gap:10px"><a href="https://calendar.app.google/YzqLVbLpqtZyvzX78" style="color:var(--g)">Agenda Auto</a><a href="https://clip.mx/@kemprodigitalsolutions" style="color:#D4AF37">Comprar eBook</a></div>
 </footer>
 <script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
