@@ -1,173 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KemProMed — Enterprise AI Infrastructure & Hub B2B</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Rajdhani', sans-serif; background: #030308; color: #e2e8f0; overflow-x: hidden; }
+    .font-tech { font-family: 'Orbitron', sans-serif; }
+    .glow-cyan { text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff; }
+    .glow-magenta { text-shadow: 0 0 15px #ff007f, 0 0 30px #ff007f; }
+    .border-neon { border: 1px solid rgba(0, 240, 255, 0.3); box-shadow: 0 0 20px rgba(0, 240, 255, 0.15); }
+    .border-neon:hover { border-color: #00f0ff; box-shadow: 0 0 30px rgba(0, 240, 255, 0.4); }
+    .border-gold { border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 0 20px rgba(212, 175, 55, 0.15); }
+    .card-glass { background: rgba(10, 12, 24, 0.85); backdrop-filter: blur(12px); }
+  </style>
+</head>
+<body class="bg-black text-slate-200">
 
-<title>KemProMed | Enterprise AI Infrastructure</title>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 card-glass border-b border-cyan-900/50 px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-400 flex items-center justify-center font-tech font-bold text-cyan-400 text-xl shadow-[0_0_15px_#00f0ff]">K</div>
+      <span class="font-tech text-xl font-bold tracking-widest text-white">KEMPRO<span class="text-cyan-400">MED</span></span>
+    </div>
+    <div class="hidden md:flex items-center gap-6 font-tech text-xs tracking-wider text-slate-400">
+      <a href="#finanzas" class="hover:text-cyan-400 transition">K-AURA</a>
+      <a href="#salud" class="hover:text-cyan-400 transition">NEXUS (NOM-004)</a>
+      <a href="#industria" class="hover:text-cyan-400 transition">FLOW 4.0</a>
+      <a href="#educacion" class="hover:text-cyan-400 transition">UNICEF EDTECH</a>
+    </div>
+    <a href="#blueprint" class="font-tech text-xs font-bold bg-gradient-to-r from-amber-500 to-yellow-300 text-black px-4 py-2 rounded-lg shadow-[0_0_15px_rgba(212,175,55,0.4)] hover:scale-105 transition">
+      📖 BLUEPRINT $37 USD
+    </a>
+  </nav>
 
-<style>
+  <!-- HERO SECTION -->
+  <section class="relative pt-36 pb-20 px-6 max-w-7xl mx-auto text-center">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.12)_0,transparent_70%)]"></div>
+    <div class="inline-block px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/40 font-tech text-xs text-cyan-400 mb-6 tracking-widest shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+      ● MVP 1.0 OPERATIVO • RENDER CDN GLOBAL • NOM-004 / NOM-024
+    </div>
+    <h1 class="font-tech text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
+      Enterprise AI <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 glow-cyan">Infrastructure</span>
+    </h1>
+    <p class="max-w-3xl mx-auto text-slate-400 text-lg md:text-xl font-medium mb-10">
+      Infraestructura tecnológica y financiera B2B que opera con flujos de datos en tiempo real, microservicios distribuidos y terminales de alta disponibilidad.
+    </p>
 
-:root{
-    --bg:#050816;
-    --card:#0F172A;
-    --border:#1E293B;
-    --cyan:#00D4B2;
-    --blue:#2563EB;
-    --text:#FFFFFF;
-    --gray:#94A3B8;
-}
+    <!-- METRICS HUD -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+      <div class="card-glass p-4 rounded-xl border border-cyan-500/20">
+        <div class="text-xs text-slate-500 font-tech">UPTIME GLOBAL</div>
+        <div class="text-2xl font-tech font-bold text-cyan-400">99.99%</div>
+      </div>
+      <div class="card-glass p-4 rounded-xl border border-cyan-500/20">
+        <div class="text-xs text-slate-500 font-tech">RENDIMIENTO</div>
+        <div class="text-2xl font-tech font-bold text-pink-500">1.2M req/s</div>
+      </div>
+      <div class="card-glass p-4 rounded-xl border border-cyan-500/20">
+        <div class="text-xs text-slate-500 font-tech">EJECUCIÓN</div>
+        <div class="text-2xl font-tech font-bold text-amber-400">Polygon RPC</div>
+      </div>
+      <div class="card-glass p-4 rounded-xl border border-cyan-500/20">
+        <div class="text-xs text-slate-500 font-tech">PASARELA</div>
+        <div class="text-2xl font-tech font-bold text-emerald-400">Clip SPEI 24/7</div>
+      </div>
+    </div>
+  </section>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-}
+  <!-- 4 PILARES DEL ECOSISTEMA -->
+  <section class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="font-tech text-2xl md:text-3xl font-bold text-white mb-10 text-center tracking-wider">
+      ECOSISTEMA MULTIMODULAR <span class="text-cyan-400">B2B</span>
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-body{
-    background:
-    radial-gradient(circle at top right,#00d4b215 0%,transparent 35%),
-    radial-gradient(circle at bottom left,#2563eb15 0%,transparent 40%),
-    var(--bg);
-    color:var(--text);
-    line-height:1.6;
-}
+      <!-- PILAR 1: K-AURA -->
+      <div id="finanzas" class="card-glass p-6 rounded-2xl border-neon transition flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-400 flex items-center justify-center font-tech text-purple-400 font-bold mb-4">⚡</div>
+          <h3 class="font-tech text-xl font-bold text-white mb-2">K-AURA Core Engine</h3>
+          <p class="text-xs text-purple-400 font-tech mb-3">FINTECH B2B • POLYGON NETWORK</p>
+          <p class="text-slate-400 text-sm mb-4">Simulación estocástica Monte Carlo, Entropía de Shannon determinista y licencias Web3.</p>
+        </div>
+        <div class="text-xs text-slate-500 font-mono border-t border-slate-800 pt-3">1M+ Solicitudes / Seg</div>
+      </div>
 
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
+      <!-- PILAR 2: NEXUS -->
+      <div id="salud" class="card-glass p-6 rounded-2xl border-neon transition flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-400 flex items-center justify-center font-tech text-cyan-400 font-bold mb-4">🏥</div>
+          <h3 class="font-tech text-xl font-bold text-white mb-2">KemProMed Nexus</h3>
+          <p class="text-xs text-cyan-400 font-tech mb-3">SALUD DIGITAL • NOM-004 / NOM-024</p>
+          <p class="text-slate-400 text-sm mb-4">Triaje inteligente NEWS2, expediente clínico normado y telemedicina 24/7.</p>
+        </div>
+        <div class="text-xs text-slate-500 font-mono border-t border-slate-800 pt-3">Atención Médica Digital</div>
+      </div>
 
-.hero{
-    min-height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
+      <!-- PILAR 3: FLOW -->
+      <div id="industria" class="card-glass p-6 rounded-2xl border-neon transition flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-400 flex items-center justify-center font-tech text-blue-400 font-bold mb-4">🏭</div>
+          <h3 class="font-tech text-xl font-bold text-white mb-2">KemProMed Flow</h3>
+          <p class="text-xs text-blue-400 font-tech mb-3">INDUSTRIA 4.0 • OPTIMIZACIÓN</p>
+          <p class="text-slate-400 text-sm mb-4">Diagnóstico de cuellos de botella, reducción de mermas y simulación operativa.</p>
+        </div>
+        <div class="text-xs text-slate-500 font-mono border-t border-slate-800 pt-3">Cero Mermas Industriales</div>
+      </div>
 
-.hero h1{
-    font-size:3.5rem;
-    margin-bottom:15px;
-}
+      <!-- PILAR 4: K-PRO -->
+      <div id="educacion" class="card-glass p-6 rounded-2xl border-neon transition flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-pink-500/20 border border-pink-400 flex items-center justify-center font-tech text-pink-400 font-bold mb-4">🌍</div>
+          <h3 class="font-tech text-xl font-bold text-white mb-2">K-Pro Educación</h3>
+          <p class="text-xs text-pink-400 font-tech mb-3">EDTECH • ACUERDO UNICEF 2014</p>
+          <p class="text-slate-400 text-sm mb-4">Clases de idiomas gratuitas para la infancia con tutor interactivo adaptativo.</p>
+        </div>
+        <div class="text-xs text-slate-500 font-mono border-t border-slate-800 pt-3">Inclusión Educativa Global</div>
+      </div>
 
-.hero .tag{
-    color:var(--cyan);
-    font-size:14px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    font-weight:bold;
-}
+    </div>
+  </section>
 
-.hero p{
-    max-width:850px;
-    margin:auto;
-    color:var(--gray);
-    font-size:1.1rem;
-}
+  <!-- SECCIÓN COMPRA DE BLUEPRINT -->
+  <section id="blueprint" class="py-16 px-6 max-w-5xl mx-auto">
+    <div class="card-glass p-8 md:p-12 rounded-3xl border-gold relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"></div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 border-b border-amber-500/20 pb-6">
+        <div>
+          <span class="font-tech text-xs text-amber-400 tracking-widest uppercase">TOM & ALX SPACE • KEMPRO DIGITAL SOLUTIONS</span>
+          <h2 class="font-tech text-3xl font-bold text-white mt-1">Del Rechazo a la <span class="text-amber-400">Resiliencia</span></h2>
+        </div>
+        <div class="text-right">
+          <div class="font-tech text-3xl font-black text-amber-400">$37 USD</div>
+          <div class="text-xs text-slate-400">Entrega Digital Inmediata</div>
+        </div>
+      </div>
 
-.founder{
-    margin-top:25px;
-    color:#cbd5e1;
-    font-size:.95rem;
-}
+      <p class="text-slate-300 text-sm md:text-base mb-8 leading-relaxed">
+        No es teoría. Es el blueprint técnico de cómo convertí mil rechazos en una infraestructura B2B real desplegada en Render + Polygon + Clip.
+      </p>
 
-.btns{
-    margin-top:35px;
-}
+      <!-- PASARELA SPEI -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-black/60 p-6 rounded-2xl border border-slate-800 mb-8">
+        <div>
+          <div class="font-tech text-xs text-amber-400 mb-2">💳 PAGO VÍA SPEI CLIP</div>
+          <div class="font-mono text-xs text-slate-300 space-y-1">
+            <div>Beneficiario: <span class="text-white">Vicente Perez Lopez</span></div>
+            <div>CLABE: <span class="text-amber-400 font-bold">730969200011330860</span></div>
+            <div>Concepto: <span class="text-white">TomAlxSpace</span></div>
+          </div>
+          <button onclick="navigator.clipboard.writeText('730969200011330860'); alert('CLABE copiada');" 
+                  class="mt-4 font-tech text-xs font-bold bg-amber-500 text-black px-4 py-2 rounded-lg hover:bg-amber-400 transition">
+            Copiar CLABE SPEI
+          </button>
+        </div>
+        <div>
+          <div class="font-tech text-xs text-cyan-400 mb-2">🔒 VERIFICAR DESBLOQUEO</div>
+          <input type="text" placeholder="Pega folio SPEI o últimos 4 dígitos..." 
+                 class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-xs text-white focus:border-cyan-400 outline-none mb-3">
+          <a href="https://wa.me/?text=Hola%20KemProMed,%20adjunto%20comprobante%20de%20$37%20USD" target="_blank" 
+             class="block text-center font-tech text-xs font-bold bg-cyan-500 text-black py-3 rounded-lg hover:bg-cyan-400 transition">
+            Desbloquear Blueprint ($37 USD)
+          </a>
+        </div>
+      </div>
 
-.btn{
-    display:inline-block;
-    margin:8px;
-    padding:14px 24px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:700;
-    transition:.3s;
-}
+    </div>
+  </section>
 
-.btn-primary{
-    background:var(--cyan);
-    color:#000;
-}
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="border-t border-slate-900 bg-black/90 py-12 px-6 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <div class="font-tech text-slate-300 text-sm">KemPro Digital Solutions • SLRC, Sonora, México</div>
+      <div>Titular de Infraestructura: Dr. Mauro E. Falcón Muñoz</div>
+      <div>Certificado NOM-004-SSA3-2012 / NOM-024 • Cifrado TLS 256 bits</div>
+      <div class="text-slate-600 pt-4">© 2026 KemProMed. Todos los derechos reservados.</div>
+    </div>
+  </footer>
 
-.btn-secondary{
-    border:1px solid var(--border);
-    color:white;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.section{
-    padding:70px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-    font-size:2rem;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:25px;
-    transition:.3s;
-}
-
-.card:hover{
-    border-color:var(--cyan);
-    transform:translateY(-6px);
-}
-
-.badge{
-    display:inline-block;
-    margin-bottom:15px;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:bold;
-    color:var(--cyan);
-    border:1px solid rgba(0,212,178,.4);
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-.card p{
-    color:var(--gray);
-    margin-bottom:20px;
-}
-
-.card a{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-}
-
-.stat{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:12px;
-    text-align:center;
-    padding:25px;
-}
-
+</body>
+</html>
