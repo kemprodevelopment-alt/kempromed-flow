@@ -1,372 +1,433 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KemProMed — Enterprise AI Infrastructure & Hub B2B</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #030712;
-            background-image: 
-                linear-gradient(to right, rgba(30, 41, 59, 0.25) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(30, 41, 59, 0.25) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KemProMed — Infraestructura Clínica Dual: Enterprise Gold & Comunitario</title>
+
+  <!-- INDEXACIÓN Y SEO (GOOGLE CLOUD / SEARCH CONSOLE VERIFICATION) -->
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://kempromed.com/" />
+  <meta name="description" content="Ecosistema tecnológico dual de salud y educación médica: KemProMed Gold (Enterprise Cloud GCE) y KemProMed Core (Operación Comunitaria Offline-First). En vinculación con Salud y Bienestar Social A.C." />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kempromed.com/" />
+  <meta property="og:title" content="KemProMed — Infraestructura Clínica Dual & Hub B2B" />
+  <meta property="og:description" content="Tecnología de misión crítica: Edición Enterprise Gold para instituciones y Edición Comunitaria gratuita." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Rajdhani', sans-serif; background: #030308; color: #e2e8f0; overflow-x: hidden; }
+    .font-tech { font-family: 'Orbitron', sans-serif; }
+    .glow-cyan { text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff; }
+    .glow-gold { text-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+    .border-neon { border: 1px solid rgba(0, 240, 255, 0.3); box-shadow: 0 0 20px rgba(0, 240, 255, 0.12); }
+    .border-neon:hover { border-color: #00f0ff; box-shadow: 0 0 30px rgba(0, 240, 255, 0.35); }
+    .border-gold { border: 1px solid rgba(212, 175, 55, 0.55); box-shadow: 0 0 25px rgba(212, 175, 55, 0.18); }
+    .border-gold:hover { border-color: #facc15; box-shadow: 0 0 35px rgba(212, 175, 55, 0.35); }
+    .card-glass { background: rgba(10, 12, 24, 0.88); backdrop-filter: blur(12px); }
+  </style>
 </head>
-<body class="text-slate-100 antialiased min-h-screen flex flex-col selection:bg-cyan-500 selection:text-slate-950">
+<body class="bg-black text-slate-200">
 
-    <!-- Navbar Superior -->
-    <header class="border-b border-slate-800/80 bg-[#030712]/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-lg border border-cyan-500/40 bg-cyan-950/50 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.2)]">
-                    <span class="font-mono font-bold text-cyan-400 text-lg">K</span>
-                </div>
-                <span class="font-extrabold tracking-widest text-white text-base sm:text-lg">KEMPROMED</span>
-            </a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 card-glass border-b border-cyan-900/50 px-6 py-4 flex justify-between items-center">
+    <a href="#" class="flex items-center gap-3">
+      <svg class="w-9 h-9" viewBox="0 0 40 40" fill="none">
+        <rect x="1" y="1" width="38" height="38" rx="9" fill="#071324" stroke="#00f0ff" stroke-width="1.5"/>
+        <path d="M13 11V29M13 20L24 11M17 17L26 29" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M27 12H31M29 10V14" stroke="#facc15" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <span class="font-tech text-xl font-bold tracking-widest text-white">KEMPRO<span class="text-cyan-400">MED</span></span>
+        <span class="hidden sm:inline-block ml-2 text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-700/50">GCE CORE HUB</span>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-6 font-tech text-xs tracking-wider text-slate-400">
+      <a href="#ediciones" class="hover:text-amber-400 transition">GOLD VS. CORE</a>
+      <a href="#pilares" class="hover:text-cyan-400 transition">MÓDULOS EN VIVO</a>
+      <a href="https://calendar.app.google/zPJntdTs2bGMJ7hy5" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition">AGENDA DEMO</a>
+      <a href="#pasarelas" class="hover:text-cyan-400 transition">PASARELAS B2B</a>
+    </div>
+    <a href="#pasarelas" class="font-tech text-xs font-bold bg-gradient-to-r from-amber-500 to-yellow-300 text-black px-4 py-2 rounded-lg shadow-[0_0_15px_rgba(212,175,55,0.4)] hover:scale-105 transition">
+      ⚡ EDICIÓN GOLD B2B
+    </a>
+  </nav>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-7 text-xs font-mono tracking-wider text-slate-400">
-                <a href="https://k-aura-ser.onrender.com" target="_blank" class="hover:text-cyan-400 transition">K-AURA SERVER</a>
-                <a href="#pilares" class="hover:text-cyan-400 transition">PILARES B2B</a>
-                <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="hover:text-cyan-400 transition">AGENDA CITA</a>
-                <a href="#pagos" class="hover:text-cyan-400 transition">PAGO CLIP</a>
-            </nav>
+  <!-- HERO SECTION -->
+  <section class="relative pt-36 pb-12 px-6 max-w-7xl mx-auto text-center">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.12)_0,transparent_70%)]"></div>
+    <div class="inline-block px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/40 font-tech text-xs text-cyan-400 mb-6 tracking-widest shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+      ● DR. MAURO E. FALCÓN MUÑOZ • SALUD Y BIENESTAR SOCIAL A.C. (REG. 2014)
+    </div>
+    <h1 class="font-tech text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
+      Infraestructura Clínica <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-cyan-400 to-blue-500 glow-cyan">Dual & Soberana</span>
+    </h1>
+    <p class="max-w-3xl mx-auto text-slate-400 text-lg md:text-xl font-medium mb-10">
+      Arquitectura empresarial de misión crítica sobre Google Cloud Platform (GCE) para corporativos hospitalarios, y operación gratuita offline-first para comunidades y escuelas.
+    </p>
 
-            <!-- CTA Licencia B2B -->
-            <div class="flex items-center gap-3">
-                <a href="#pagos" class="px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-mono font-bold text-xs tracking-wide transition shadow-[0_0_20px_rgba(245,158,11,0.3)]">
-                    LICENCIA B2B $31 USD
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-
-        <!-- Hero Section -->
-        <section class="text-center max-w-4xl mx-auto space-y-6 pt-4">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-700/80 bg-slate-900/80 text-[11px] font-mono tracking-widest text-slate-300 uppercase">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                TOM & ALX SPACE • DR. MAURO E. FALCÓN MUÑOZ • PRODUCCIÓN ACTIVA
-            </div>
-
-            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-[1.1]">
-                Enterprise AI<br>
-                <span class="bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent">Infrastructure</span>
-            </h1>
-
-            <p class="text-slate-400 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
-                Infraestructura tecnológica, clínica y financiera B2B operando con flujos de datos en tiempo real, arquitectura offline-first y terminales de alta disponibilidad.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-                <a href="https://k-aura-ser.onrender.com" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono font-bold text-xs tracking-wider uppercase transition shadow-[0_0_25px_rgba(6,182,212,0.35)]">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    <span>ACCEDER A MOTOR K-AURA</span>
-                </a>
-                <a href="https://calendar.app.google/RqprhrQL2uAkE1w66" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700 font-mono font-bold text-xs tracking-wider uppercase transition">
-                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    <span>AGENDAR ASESORÍA / DEMO</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- KPI Metrics Bar -->
-        <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="p-5 rounded-xl border border-slate-800/90 bg-slate-900/50 backdrop-blur text-center space-y-1">
-                <span class="text-[10px] font-mono tracking-widest text-slate-500 uppercase block">UPTIME GLOBAL</span>
-                <span class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono">99.99%</span>
-            </div>
-            <div class="p-5 rounded-xl border border-slate-800/90 bg-slate-900/50 backdrop-blur text-center space-y-1">
-                <span class="text-[10px] font-mono tracking-widest text-slate-500 uppercase block">RENDIMIENTO</span>
-                <span class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">1.2M req/s</span>
-            </div>
-            <div class="p-5 rounded-xl border border-slate-800/90 bg-slate-900/50 backdrop-blur text-center space-y-1">
-                <span class="text-[10px] font-mono tracking-widest text-slate-500 uppercase block">EJECUCIÓN</span>
-                <span class="text-2xl sm:text-3xl font-black text-indigo-400 font-mono">Polygon RPC</span>
-            </div>
-            <div class="p-5 rounded-xl border border-slate-800/90 bg-slate-900/50 backdrop-blur text-center space-y-1">
-                <span class="text-[10px] font-mono tracking-widest text-slate-500 uppercase block">PASARELA</span>
-                <span class="text-2xl sm:text-3xl font-black text-amber-400 font-mono">Clip SPEI 24/7</span>
-            </div>
-        </section>
-
-        <!-- Ecosistema Multimodular B2B (4 Pilares Activos) -->
-        <section id="pilares" class="space-y-8 pt-4">
-            <div class="text-center space-y-2">
-                <h2 class="text-2xl sm:text-4xl font-black tracking-tight text-white uppercase">
-                    ECOSISTEMA MULTIMODULAR <span class="text-cyan-400">B2B</span>
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-400 font-mono">
-                    Microservicios asíncronos independientes • Gobernanza Zero Trust
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- 1. K-AURA Core Engine -->
-                <a href="https://k-aura-ser.onrender.com" target="_blank" class="group rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/60 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(6,182,212,0.12)]">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">ONLINE</span>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-extrabold text-white group-hover:text-cyan-400 transition">K-AURA Core Engine</h3>
-                            <span class="text-[10px] font-mono text-cyan-400 tracking-wider uppercase block mt-1">FINTECH B2B • POLYGON NETWORK</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Simulación estocástica Monte Carlo, Entropía de Shannon y mitigación de volatilidad con gatillos deterministas y licencia activa en producción.
-                        </p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-cyan-400">
-                        <span>Abrir Terminal</span>
-                        <span class="group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
-                </a>
-
-                <!-- 2. KemProMed Nexus -->
-                <a href="https://kempromed-nexus.onrender.com" target="_blank" class="group rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/60 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(16,185,129,0.12)]">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                            </div>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">ONLINE</span>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-extrabold text-white group-hover:text-emerald-400 transition">KemProMed Nexus</h3>
-                            <span class="text-[10px] font-mono text-emerald-400 tracking-wider uppercase block mt-1">SALUD DIGITAL • NOM-004 / 024 / 034</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Triage de urgencias, expediente clínico normado, FRAP prehospitalario y operación continua con arquitectura offline-first.
-                        </p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-emerald-400">
-                        <span>Abrir Clínica</span>
-                        <span class="group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
-                </a>
-
-                <!-- 3. KemProMed Flow / Industrial (NUEVA URL ACTIVA) -->
-                <a href="https://kempromed-industrial.onrender.com/" target="_blank" class="group rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-950/20 to-slate-900/70 hover:border-amber-400 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(245,158,11,0.18)]">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/40 flex items-center justify-center text-amber-400">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                            </div>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold">INDUSTRIAL LIVE</span>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-extrabold text-white group-hover:text-amber-400 transition">KemProMed Flow Industrial</h3>
-                            <span class="text-[10px] font-mono text-amber-400 tracking-wider uppercase block mt-1">SIMULACIÓN • ENTROPÍA & TRAZABILIDAD</span>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Digitalización integral de plantas de producción, simulador de entropía, calculadora de ROI, ciberseguridad Zero Trust y reducción de hasta 40% en mermas.
-                        </p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-amber-500/20 flex items-center justify-between text-xs font-mono text-amber-400 font-semibold">
-                        <span>Abrir Planta Industrial</span>
-                        <span class="group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
-                </a>
-
-                <!-- 4. K-Pro Educación -->
-                <a href="https://k-pro-educacion.onrender.com" target="_blank" class="group rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-indigo-500/60 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(99,102,241,0.12)]">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <div class="w-11 h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
-                            </div>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">ONLINE</span>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-extrabold text-white group-hover:text-indigo-400 transition">K-Pro Educación</h3>
-                            <span class="text-[10px] font-mono text-indigo-400 tracking-wider uppercase block mt-1">EDTECH • SALUD Y BIENESTAR SOCIAL A.C.</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Capacitación médica continua, simulación clínica y programas educativos alineados a SEP, LGDNNA y COPPA.
-                        </p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-indigo-400">
-                        <span>Abrir Campus</span>
-                        <span class="group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- Biblioteca & Publicaciones -->
-        <section class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="space-y-2 max-w-2xl">
-                <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-widest">PROPIEDAD INTELECTUAL & OBRAS</span>
-                <h3 class="text-xl font-bold text-white">Librería Digital & Documentación Técnica</h3>
-                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    Acceda a publicaciones especializadas, arquitectura de sistemas y obras de autoría del Dr. Mauro Ernesto Falcón Muñoz.
-                </p>
-            </div>
-            <a href="https://www.meta.ai/share/a/8d791a0c-f5de-410b-88f9-d4070f7935b8" target="_blank" class="w-full md:w-auto px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-mono font-bold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 shrink-0">
-                <span>ABRIR LIBRERÍA DIGITAL</span>
-                <span>→</span>
-            </a>
-        </section>
-
-        <!-- Licenciamiento B2B & Pasarelas de Pago -->
-        <section id="pagos" class="space-y-6">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight">Licenciamiento B2B & Tesorería</h2>
-                    <p class="text-xs text-slate-400 font-mono">Activación directa de nodos, asesoría especializada y suscripciones</p>
-                </div>
-                <span class="text-xs font-mono text-amber-400">Licencia Base: $31 USD / Módulo</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- FIAT / SPEI / Clip -->
-                <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-5">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-white text-sm">Transferencia Interbancaria (SPEI) / Clip</span>
-                            <span class="text-[10px] font-mono px-2.5 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">FIAT MXN / USD</span>
-                        </div>
-                        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/90 space-y-1">
-                            <span class="text-[10px] font-mono text-slate-500 uppercase block">Concepto Oficial:</span>
-                            <span class="text-xs font-medium text-slate-200">Licenciamiento B2B / Consultoría Tecnológica KemProMed</span>
-                        </div>
-                        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-between gap-2">
-                            <div>
-                                <span class="text-[10px] font-mono text-slate-500 uppercase block">CLABE Interbancaria:</span>
-                                <span id="clabeText" class="font-mono text-sm text-cyan-400 font-bold">730969200011330860</span>
-                            </div>
-                            <button onclick="copyClabe()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-mono text-xs border border-slate-700 transition">
-                                <span id="copyBtnText">Copiar</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-[11px] font-mono text-slate-500 flex items-center justify-between pt-3 border-t border-slate-800/80">
-                        <span>Visa • Mastercard • AMEX • SPEI</span>
-                        <span class="text-emerald-400">● Operativo 24/7</span>
-                    </div>
-                </div>
-
-                <!-- Crypto / Web3 -->
-                <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between space-y-5">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-white text-sm">Liquidación Descentralizada (Web3)</span>
-                            <span class="text-[10px] font-mono px-2.5 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">ON-CHAIN</span>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Liquidación inmediata de licencias SaaS, simulaciones industriales y acceso a nodos mediante activos digitales.
-                        </p>
-                        <div class="grid grid-cols-3 gap-3">
-                            <button onclick="openCryptoModal('BTC')" class="p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-amber-500/60 text-center transition">
-                                <span class="block font-mono font-bold text-amber-400 text-sm">BTC</span>
-                                <span class="text-[10px] text-slate-500">Bitcoin</span>
-                            </button>
-                            <button onclick="openCryptoModal('ETH')" class="p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-indigo-500/60 text-center transition">
-                                <span class="block font-mono font-bold text-indigo-400 text-sm">ETH</span>
-                                <span class="text-[10px] text-slate-500">Ethereum</span>
-                            </button>
-                            <button onclick="openCryptoModal('USDT')" class="p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-emerald-500/60 text-center transition">
-                                <span class="block font-mono font-bold text-emerald-400 text-sm">USDT</span>
-                                <span class="text-[10px] text-slate-500">Polygon / TRC20</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="text-[11px] font-mono text-slate-500 flex items-center justify-between pt-3 border-t border-slate-800/80">
-                        <span>Validación criptográfica directa</span>
-                        <span class="text-amber-400">● Zero Trust</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-slate-800/80 bg-[#030712] py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
-            <div>
-                © 2026 KEMPROMED ECOSYSTEM • SAN LUIS RÍO COLORADO, SONORA.
-            </div>
-            <div>
-                ARQUITECTURA Y PROPIEDAD INTELECTUAL: <span class="text-slate-300 font-semibold">DR. MAURO ERNESTO FALCÓN MUÑOZ</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal Crypto -->
-    <div id="cryptoModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 space-y-4">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h3 id="cryptoTitle" class="font-mono font-bold text-white text-sm">Dirección de Depósito Crypto</h3>
-                <button onclick="closeCryptoModal()" class="text-slate-400 hover:text-white font-bold">✕</button>
-            </div>
-            <div class="space-y-3 text-xs">
-                <p class="text-slate-400">Liquidación directa para licenciamiento B2B, módulos industriales o consultoría.</p>
-                <div class="p-3 bg-slate-950 border border-slate-800 rounded-lg space-y-1">
-                    <span class="text-slate-500 font-mono text-[10px] uppercase block">Dirección Pública:</span>
-                    <span id="cryptoAddress" class="font-mono text-cyan-400 font-semibold break-all text-xs">0x71C7656EC7ab88b098defB751B7401B5f6d8976F</span>
-                </div>
-            </div>
-            <button onclick="closeCryptoModal()" class="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-mono text-xs font-semibold">Cerrar Ventana</button>
-        </div>
+    <!-- CTAS PRINCIPALES -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12 font-tech text-xs">
+      <a href="#pilares" class="bg-cyan-500 text-black font-bold px-6 py-3 rounded-xl hover:bg-cyan-400 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition">
+        🚀 EXPLORAR ECOSISTEMA EN VIVO
+      </a>
+      <a href="https://calendar.app.google/zPJntdTs2bGMJ7hy5" target="_blank" rel="noopener noreferrer" class="bg-slate-900 text-amber-300 border border-amber-500/50 px-6 py-3 rounded-xl hover:border-amber-400 transition">
+        👑 IMPLEMENTACIÓN ENTERPRISE GOLD
+      </a>
     </div>
 
-    <script>
-        function copyClabe() {
-            const clabe = document.getElementById('clabeText').innerText;
-            navigator.clipboard.writeText(clabe);
-            const btnText = document.getElementById('copyBtnText');
-            btnText.innerText = '¡Copiado!';
-            setTimeout(() => { btnText.innerText = 'Copiar'; }, 2000);
-        }
+    <!-- METRICS HUD -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left mb-8">
+      <div class="card-glass p-4 rounded-xl border border-cyan-500/20">
+        <div class="text-xs text-slate-500 font-tech">DISPONIBILIDAD</div>
+        <div class="text-2xl font-tech font-bold text-cyan-400">99.99%</div>
+      </div>
+      <div class="card-glass p-4 rounded-xl border border-cyan-500/20">
+        <div class="text-xs text-slate-500 font-tech">NORMATIVA</div>
+        <div class="text-2xl font-tech font-bold text-emerald-400">NOM 004/024/034</div>
+      </div>
+      <div class="card-glass p-4 rounded-xl border border-cyan-500/20">
+        <div class="text-xs text-slate-500 font-tech">INFRAESTRUCTURA</div>
+        <div class="text-2xl font-tech font-bold text-amber-400">GCE Enterprise</div>
+      </div>
+      <div class="card-glass p-4 rounded-xl border border-cyan-500/20">
+        <div class="text-xs text-slate-500 font-tech">MODO BATALLA</div>
+        <div class="text-2xl font-tech font-bold text-sky-400">100% Offline</div>
+      </div>
+    </div>
+  </section>
 
-        function openCryptoModal(coin) {
-            const modal = document.getElementById('cryptoModal');
-            const title = document.getElementById('cryptoTitle');
-            const addr = document.getElementById('cryptoAddress');
-            
-            if(coin === 'BTC') {
-                title.innerText = 'Depósito Bitcoin (BTC)';
-                addr.innerText = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa';
-            } else if(coin === 'ETH') {
-                title.innerText = 'Depósito Ethereum (ETH)';
-                addr.innerText = '0x71C7656EC7ab88b098defB751B7401B5f6d8976F';
-            } else {
-                title.innerText = 'Depósito USDT (Polygon / TRC20)';
-                addr.innerText = 'TYD2v9kH87gJ11sK8mP2X91sK7xL9qM0pL';
-            }
-            modal.classList.remove('hidden');
-        }
+  <!-- ARQUITECTURA DUAL: GOLD ENTERPRISE VS. CORE COMUNITARIO -->
+  <section id="ediciones" class="py-12 px-6 max-w-6xl mx-auto">
+    <h2 class="font-tech text-2xl md:text-3xl font-bold text-white mb-3 text-center tracking-wider">
+      SEPARACIÓN DE <span class="text-amber-400">CATEGORÍAS</span>
+    </h2>
+    <p class="text-center text-slate-400 text-sm max-w-2xl mx-auto mb-10">
+      Dos niveles de despliegue sobre un mismo núcleo de ingeniería: el licenciamiento corporativo financia la operación gratuita en comunidades y planteles educativos.
+    </p>
 
-        function closeCryptoModal() {
-            document.getElementById('cryptoModal').classList.add('hidden');
-        }
-    </script>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- EDICIÓN DE ORO (GCE ENTERPRISE) -->
+      <div class="card-glass p-8 rounded-3xl border-gold flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none">
+                <polygon points="24,3 43,14 43,34 24,45 5,34 5,14" fill="#181204" stroke="#facc15" stroke-width="2"/>
+                <path d="M16 15V33M16 24L27 15M20 21L29 33" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="33" cy="16" r="3" fill="#facc15"/>
+              </svg>
+              <div>
+                <span class="text-xs font-tech text-amber-400 tracking-widest">CATEGORÍA 1 • ENTERPRISE</span>
+                <h3 class="font-tech text-2xl font-bold text-white">KemProMed <span class="text-amber-400 glow-gold">GOLD</span></h3>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-amber-500/20 border border-amber-400/50 text-amber-300 font-tech text-[10px]">GCE CLOUD</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+            Infraestructura dedicada en Google Cloud Compute Engine para hospitales privados, aseguradoras, empresas industriales y redes de ambulancias corporativas.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 mb-6 border-t border-amber-500/20 pt-4 font-mono">
+            <li>✓ Instancias dedicadas GCE con respaldo automático y alta disponibilidad</li>
+            <li>✓ Interoperabilidad clínica SIRES (NOM-024) y auditoría en tiempo real</li>
+            <li>✓ Pasarela corporativa internacional vía Stripe y SPEI Empresarial</li>
+            <li>✓ Acuerdo de Nivel de Servicio (SLA) dedicado</li>
+          </ul>
+        </div>
+        <a href="https://buy.stripe.com/fZu4gzgje0nQ4XI7AUbbG00" target="_blank" rel="noopener noreferrer" class="w-full text-center font-tech text-xs font-bold bg-gradient-to-r from-amber-500 to-yellow-300 text-black py-3 rounded-xl hover:scale-[1.02] transition">
+          ACTIVAR LICENCIA GOLD B2B →
+        </a>
+      </div>
+
+      <!-- EDICIÓN CORE / BATALLA ("EL VOCHO" COMUNITARIO) -->
+      <div class="card-glass p-8 rounded-3xl border-neon flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <svg class="w-12 h-12" viewBox="0 0 48 48" fill="none">
+                <rect x="5" y="5" width="38" height="38" rx="10" fill="#061626" stroke="#00f0ff" stroke-width="2"/>
+                <path d="M16 15V33M16 24L27 15M20 21L29 33" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M31 24H37M34 21V27" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <span class="text-xs font-tech text-cyan-400 tracking-widest">CATEGORÍA 2 • HUMANITARIO</span>
+                <h3 class="font-tech text-2xl font-bold text-white">KemProMed <span class="text-cyan-400">CORE</span></h3>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 font-tech text-[10px]">ZERO-COST</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+            Edición ligera, indestructible y gratuita para clínicas rurales, paramédicos comunitarios, escuelas públicas y brigadas de emergencia. Opera 100% sin internet.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 mb-6 border-t border-cyan-500/20 pt-4 font-mono">
+            <li>✓ Ejecución PWA Offline-First en cualquier dispositivo móvil o PC</li>
+            <li>✓ Cifrado local AES-256 sin consumo de datos móviles</li>
+            <li>✓ 0% publicidad en módulos clínicos (Nexus y Flow)</li>
+            <li>✓ Sostenido mediante subsidio cruzado y aportaciones comunitarias</li>
+          </ul>
+        </div>
+        <a href="https://kempromed-nexus.onrender.com/" target="_blank" rel="noopener noreferrer" class="w-full text-center font-tech text-xs font-bold bg-cyan-500/20 border border-cyan-400 text-cyan-300 py-3 rounded-xl hover:bg-cyan-500 hover:text-black transition">
+          ABRIR MODO COMUNITARIO GRATUITO →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 PILARES DEL ECOSISTEMA EN PRODUCCIÓN -->
+  <section id="pilares" class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="font-tech text-2xl md:text-3xl font-bold text-white mb-10 text-center tracking-wider">
+      MÓDULOS EN <span class="text-cyan-400">PRODUCCIÓN</span>
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- PILAR 1: K-AURA SERVER -->
+      <a href="https://k-aura-ser.onrender.com/" target="_blank" rel="noopener noreferrer" class="card-glass p-6 rounded-2xl border-neon transition flex flex-col justify-between hover:scale-105">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-400 flex items-center justify-center font-tech text-purple-400 font-bold mb-4">⚡</div>
+          <h3 class="font-tech text-xl font-bold text-white mb-2">K-AURA Core Engine</h3>
+          <p class="text-xs text-purple-400 font-tech mb-3">SIMULACIÓN • AUDITORÍA WEB3</p>
+          <p class="text-slate-400 text-sm mb-4">Motor estocástico Monte Carlo, Entropía de Shannon, optimización de mermas y trazabilidad determinista.</p>
+        </div>
+        <div class="text-xs text-cyan-400 font-mono border-t border-slate-800 pt-3 flex items-center justify-between">
+          <span>Abrir Motor K-AURA</span> →
+        </div>
+      </a>
+
+      <!-- PILAR 2: KEMPROMED NEXUS -->
+      <a href="https://kempromed-nexus.onrender.com/" target="_blank" rel="noopener noreferrer" class="card-glass p-6 rounded-2xl border-neon transition flex flex-col justify-between hover:scale-105">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-400 flex items-center justify-center font-tech text-cyan-400 font-bold mb-4">🏥</div>
+          <h3 class="font-tech text-xl font-bold text-white mb-2">KemProMed Nexus</h3>
+          <p class="text-xs text-cyan-400 font-tech mb-3">SALUD DIGITAL • NOM-004 / 024 / 034</p>
+          <p class="text-slate-400 text-sm mb-4">Triaje de urgencias, expediente clínico normado, FRAP prehospitalario y operación offline-first cifrada.</p>
+        </div>
+        <div class="text-xs text-cyan-400 font-mono border-t border-slate-800 pt-3 flex items-center justify-between">
+          <span>Ejecutar Nexus</span> →
+        </div>
+      </a>
+
+      <!-- PILAR 3: KEMPROMED FLOW -->
+      <a href="https://kempromed-flow.onrender.com/" target="_blank" rel="noopener noreferrer" class="card-glass p-6 rounded-2xl border-neon transition flex flex-col justify-between hover:scale-105">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-400 flex items-center justify-center font-tech text-blue-400 font-bold mb-4">🏭</div>
+          <h3 class="font-tech text-xl font-bold text-white mb-2">KemProMed Flow</h3>
+          <p class="text-xs text-blue-400 font-tech mb-3">OPERACIONES • TRAZABILIDAD</p>
+          <p class="text-slate-400 text-sm mb-4">Coordinación operativa de flujos, control de tiempos de respuesta, optimización logística e interoperabilidad.</p>
+        </div>
+        <div class="text-xs text-cyan-400 font-mono border-t border-slate-800 pt-3 flex items-center justify-between">
+          <span>Ejecutar Flow</span> →
+        </div>
+      </a>
+
+      <!-- PILAR 4: K-PRO EDUCACIÓN -->
+      <a href="https://k-pro-educacion.onrender.com/" target="_blank" rel="noopener noreferrer" class="card-glass p-6 rounded-2xl border-neon transition flex flex-col justify-between hover:scale-105">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-pink-500/20 border border-pink-400 flex items-center justify-center font-tech text-pink-400 font-bold mb-4">🌍</div>
+          <h3 class="font-tech text-xl font-bold text-white mb-2">K-Pro Educación</h3>
+          <p class="text-xs text-pink-400 font-tech mb-3">EDTECH MASIVO • SEP / COPPA</p>
+          <p class="text-slate-400 text-sm mb-4">Capacitación médica continua, simulación clínica y educación preventiva gratuita financiada por subsidio cruzado.</p>
+        </div>
+        <div class="text-xs text-cyan-400 font-mono border-t border-slate-800 pt-3 flex items-center justify-between">
+          <span>Ejecutar Educación</span> →
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE PASARELAS SEGREGADAS POR CATEGORÍA -->
+  <section id="pasarelas" class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="card-glass p-8 md:p-12 rounded-3xl border-gold relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"></div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 border-b border-amber-500/20 pb-6">
+        <div>
+          <span class="font-tech text-xs text-amber-400 tracking-widest uppercase">GOBERNANZA FINANCIERA Y SEPARACIÓN DE CATEGORÍAS</span>
+          <h2 class="font-tech text-3xl font-bold text-white mt-1">Canales Oficiales de <span class="text-amber-400">Activación y Subsidio</span></h2>
+          <div class="text-xs text-slate-400 mt-1">Titular: <strong class="text-white">Dr. Mauro Ernesto Falcón Muñoz</strong> • Respaldo Institucional: <strong class="text-slate-200">Salud y Bienestar Social A.C. (Reg. 2014)</strong></div>
+        </div>
+        <div class="text-right">
+          <div class="font-tech text-2xl font-black text-amber-400">GCE GOLD B2B</div>
+          <div class="text-xs text-slate-400">Flujos Auditables y Segregados</div>
+        </div>
+      </div>
+
+      <!-- 3 CANALES SEPARADOS POR NATURALEZA DE OPERACIÓN -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        
+        <!-- CANAL 1: STRIPE B2B INTERNACIONAL -->
+        <div class="bg-black/70 p-6 rounded-2xl border border-amber-500/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-tech text-xs text-amber-400">💳 1. STRIPE ENTERPRISE</span>
+              <span class="text-[10px] font-mono bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded">LICENCIAS GOLD</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Procesamiento internacional con tarjeta corporativa o débito para licenciamiento <strong class="text-white">KemProMed GOLD</strong> y despliegue en nube GCE.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <a href="https://buy.stripe.com/fZu4gzgje0nQ4XI7AUbbG00" target="_blank" rel="noopener noreferrer"
+               class="block text-center font-tech text-xs font-bold bg-gradient-to-r from-amber-500 to-yellow-400 text-black py-3 rounded-lg hover:scale-[1.02] transition shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+              PAGAR LICENCIA VÍA STRIPE →
+            </a>
+          </div>
+        </div>
+
+        <!-- CANAL 2: MERCADO PAGO W (SPEI B2B MÉXICO) -->
+        <div class="bg-black/70 p-6 rounded-2xl border border-cyan-500/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-tech text-xs text-cyan-400">🏦 2. SPEI NACIONAL B2B</span>
+              <span class="text-[10px] font-mono bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded">MERCADO PAGO W</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-3">
+              Transferencia interbancaria directa para clínicas, escuelas e instituciones en México:
+            </p>
+            <div class="font-mono text-xs text-slate-300 space-y-1 mb-4 bg-slate-950/90 p-3 rounded-lg border border-slate-800">
+              <div>Institución: <span class="text-cyan-300 font-bold">Mercado Pago W</span></div>
+              <div>Beneficiario: <span class="text-white">Mauro Ernesto Falcon Muñoz</span></div>
+              <div>CLABE: <span class="text-amber-400 font-bold">722969015610432993</span></div>
+            </div>
+          </div>
+          <button id="copyClabeBtn" onclick="copyText('722969015610432993', 'copyClabeBtn', 'Copiar CLABE SPEI')" 
+                  class="font-tech text-xs font-bold bg-slate-800 text-white border border-cyan-500/50 px-4 py-2.5 rounded-lg hover:bg-cyan-500 hover:text-black transition w-full">
+            Copiar CLABE SPEI
+          </button>
+        </div>
+
+        <!-- CANAL 3: CUENTA NU DÉBITO (DEPÓSITO EN TIENDAS / FONDO COMUNITARIO) -->
+        <div class="bg-black/70 p-6 rounded-2xl border border-purple-500/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-tech text-xs text-purple-400">🟣 3. FONDO COMUNITARIO NU</span>
+              <span class="text-[10px] font-mono bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded">EFECTIVO / PESPAY</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-3">
+              Aportaciones en efectivo para subsidiar <strong class="text-white">KemProMed Core</strong> y <strong class="text-white">K-Pro Educación</strong> en OXXO, Soriana, 7-Eleven, Farmacias del Ahorro, Chedraui, Kiosko o Waldo's (vía <strong class="text-purple-300">PESPay</strong>):
+            </p>
+            <div class="font-mono text-xs text-slate-300 space-y-1 mb-4 bg-slate-950/90 p-3 rounded-lg border border-slate-800">
+              <div>Cuenta: <span class="text-purple-300 font-bold">Nu Débito (PESPay)</span></div>
+              <div>Código Depósito: <span class="text-amber-400 font-bold">5195 3702 0480 4170</span></div>
+            </div>
+          </div>
+          <button id="copyNuBtn" onclick="copyText('5195370204804170', 'copyNuBtn', 'Copiar Código Nu')" 
+                  class="font-tech text-xs font-bold bg-slate-800 text-white border border-purple-500/50 px-4 py-2.5 rounded-lg hover:bg-purple-500 hover:text-white transition w-full">
+            Copiar Código Nu
+          </button>
+        </div>
+
+      </div>
+
+      <!-- AGENDAR ASESORÍA POST-PAGO -->
+      <div class="text-center pt-4 border-t border-slate-800">
+        <span class="text-xs text-slate-400">¿Requieres despliegue GCE dedicado, factura o validación de comprobante? </span>
+        <a href="https://calendar.app.google/zPJntdTs2bGMJ7hy5" target="_blank" rel="noopener noreferrer" class="text-xs font-tech text-cyan-400 hover:underline">
+          Agendar sesión técnica en Google Calendar →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER INSTITUCIONAL Y CUMPLIMIENTO NORMATIVO -->
+  <footer class="border-t border-slate-900 bg-black/90 py-12 px-6 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <div class="font-tech text-slate-300 text-sm">KemProMed • KemPro Digital Solutions • SLRC, Sonora, México</div>
+      <div>Titular de Infraestructura: <strong class="text-slate-300">Dr. Mauro Ernesto Falcón Muñoz</strong> • En vinculación con <strong class="text-slate-300">Salud y Bienestar Social A.C. (Reg. 2014)</strong></div>
+      <div>Cumplimiento NOM-004-SSA3-2012 • NOM-024-SSA3-2012 • NOM-034-SSA3-2013 • LFPDPPP • Cifrado TLS / AES-256</div>
+      <div class="flex flex-wrap justify-center gap-3 md:gap-4 text-cyan-400 pt-2">
+        <a href="https://buy.stripe.com/fZu4gzgje0nQ4XI7AUbbG00" target="_blank" rel="noopener noreferrer" class="hover:underline">Stripe B2B</a> |
+        <a href="https://calendar.app.google/zPJntdTs2bGMJ7hy5" target="_blank" rel="noopener noreferrer" class="hover:underline">Agenda Google</a> |
+        <a href="mailto:direccion@kempromed.com" class="hover:underline">direccion@kempromed.com</a> |
+        <button onclick="openLegalModal('privacidad')" class="hover:underline">Aviso de Privacidad</button> |
+        <button onclick="openLegalModal('terminos')" class="hover:underline">Términos y Descargo Médico</button> |
+        <button onclick="openLegalModal('menores')" class="hover:underline">Protección de Menores (SEP/COPPA)</button> |
+        <button onclick="openLegalModal('financiero')" class="hover:underline">Transparencia y Donativos</button>
+      </div>
+      <div class="text-slate-600 pt-4">© 2026 KemProMed. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <!-- MODAL LEGAL DISCRETO -->
+  <div id="legalModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+    <div class="card-glass border-neon rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden">
+      <div class="px-6 py-4 border-b border-cyan-900/50 flex justify-between items-center">
+        <h3 id="modalTitle" class="font-tech text-sm font-bold text-cyan-400">Documento Normativo</h3>
+        <button onclick="closeLegalModal()" class="text-slate-400 hover:text-white text-xl font-bold">&times;</button>
+      </div>
+      <div id="modalBody" class="p-6 overflow-y-auto text-sm text-slate-300 space-y-3 leading-relaxed"></div>
+      <div class="px-6 py-3 border-t border-slate-800 flex justify-end">
+        <button onclick="closeLegalModal()" class="font-tech text-xs font-bold bg-cyan-500 text-black px-4 py-2 rounded-lg hover:bg-cyan-400">
+          CERRAR
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyText(text, btnId, defaultLabel) {
+      navigator.clipboard.writeText(text);
+      const btn = document.getElementById(btnId);
+      btn.innerText = '¡COPIADO AL PORTAPAPELES! ✓';
+      btn.classList.add('border-emerald-400', 'text-emerald-400');
+      setTimeout(() => {
+        btn.innerText = defaultLabel;
+        btn.classList.remove('border-emerald-400', 'text-emerald-400');
+      }, 3000);
+    }
+
+    const legalDocs = {
+      privacidad: {
+        title: 'AVISO DE PRIVACIDAD INTEGRAL — KEMPROMED',
+        body: `
+          <p><strong class="text-white">Titular y Responsable:</strong> KemPro Digital Solutions (Dr. Mauro Ernesto Falcón Muñoz), en vinculación institucional con Salud y Bienestar Social A.C. (Reg. 2014), en estricto apego a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).</p>
+          <p><strong class="text-white">Aislamiento de Entornos Clínicos:</strong> Los módulos operativos (<em>KemProMed Nexus</em> y <em>KemProMed Flow</em>) procesan información bajo arquitectura offline-first con persistencia cifrada local AES-256 y transporte TLS, sin comercializar ni compartir datos clínicos o personales (PII/PHI) con redes publicitarias.</p>
+          <p><strong class="text-white">Derechos ARCO:</strong> Para ejercer sus derechos de Acceso, Rectificación, Cancelación u Oposición, contacte directamente a <span class="text-cyan-400">direccion@kempromed.com</span>.</p>
+        `
+      },
+      terminos: {
+        title: 'TÉRMINOS DE USO Y DESCARGO DE RESPONSABILIDAD MÉDICA',
+        body: `
+          <p><strong class="text-white">Uso Profesional B2B y Comunitario:</strong> <em>KemProMed Nexus</em> y <em>KemProMed Flow</em> son herramientas tecnológicas de apoyo al registro clínico (NOM-004-SSA3-2012), interoperabilidad (NOM-024-SSA3-2012) y atención prehospitalaria (NOM-034-SSA3-2013) destinadas a personal de salud e instituciones autorizadas.</p>
+          <p><strong class="text-white">Entorno Educativo (K-Pro Educación):</strong> Los módulos de capacitación y simulación tienen fines exclusivamente académicos y de prevención; no sustituyen la valoración médica presencial ni constituyen atención de urgencias reales.</p>
+        `
+      },
+      menores: {
+        title: 'PROTECCIÓN DE DATOS DE MENORES (SEP / LGDNNA / COPPA)',
+        body: `
+          <p><strong class="text-white">Cumplimiento Escolar e Infantil:</strong> En programas educativos dirigidos a niñas, niños y adolescentes a través de <em>K-Pro Educación</em>, se aplican los principios de la Ley General de los Derechos de Niñas, Niños y Adolescentes (LGDNNA), lineamientos de la Secretaría de Educación Pública (SEP) y estándares internacionales COPPA.</p>
+          <p><strong class="text-white">Cero Rastreo Conductual:</strong> No se recaban expedientes clínicos reales ni datos biométricos de menores, operando bajo minimización de datos, consentimiento verificable de padres/tutores o planteles educativos y etiquetado estricto TFCD (contenido dirigido a niños sin anuncios personalizados).</p>
+        `
+      },
+      financiero: {
+        title: 'TRANSPARENCIA FINANCIERA Y SEPARACIÓN DE CATEGORÍAS',
+        body: `
+          <p><strong class="text-white">Segregación de Flujos:</strong> Los pagos por licenciamiento corporativo (<em>KemProMed Gold</em>) se procesan exclusivamente mediante Stripe Enterprise y transferencias SPEI empresariales, destinándose al mantenimiento de infraestructura cloud (GCE) y desarrollo.</p>
+          <p><strong class="text-white">Subsidio Comunitario y Recibos Deducibles:</strong> Las aportaciones destinadas al sostenimiento de <em>KemProMed Core</em> y programas educativos gratuitos se canalizan de forma transparente. Para donativos deducibles de impuestos, los comprobantes fiscales (CFDI) se emiten formalmente a través de <strong class="text-white">Salud y Bienestar Social A.C.</strong> conforme a las disposiciones fiscales vigentes.</p>
+        `
+      }
+    };
+
+    function openLegalModal(key) {
+      const doc = legalDocs[key];
+      if (!doc) return;
+      document.getElementById('modalTitle').textContent = doc.title;
+      document.getElementById('modalBody').innerHTML = doc.body;
+      const modal = document.getElementById('legalModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLegalModal() {
+      const modal = document.getElementById('legalModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
+
 </body>
 </html>
