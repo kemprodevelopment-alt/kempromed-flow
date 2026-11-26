@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KemProMed · Infraestructura y Soluciones Multi-Sector</title>
-  <meta name="description" content="Ecosistema de cuatro plataformas tecnológicas organizadas por departamentos para finanzas, educación, operación y salud." />
+  <title>KemProMed · Ecosistema Tecnológico por Departamentos</title>
+  <meta name="description" content="Cuatro hubs tecnológicos organizados por departamentos: Motor K-AURA, K-Pro-Educación, KemProMed-Flow y KemProMed Nexus." />
 
   <!-- Google tag (gtag.js) - KemProMed -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTN4YGP1Q2"></script>
@@ -25,7 +25,7 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     body {
@@ -41,158 +41,256 @@
 </head>
 <body class="bg-[#060911] text-slate-100 antialiased">
 
-  <!-- Navegación superior sobria -->
-  <header class="border-b border-slate-800/80 bg-[#090d16]/95 sticky top-0 z-50 backdrop-blur">
+  <!-- Barra superior con logotipo y acceso directo -->
+  <header class="border-b border-slate-800/80 bg-[#090d16]">
     <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
-      <a href="#inicio" class="font-tech text-lg tracking-wider text-white font-bold">
-        KEMPROMED
+      <a href="#inicio" class="flex items-center gap-3">
+        <!-- Logotipo KemProMed -->
+        <div class="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center">
+          <svg class="w-6 h-6 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 3v18M3 12h18" stroke-linecap="round" />
+            <rect x="4" y="4" width="16" height="16" rx="4" />
+          </svg>
+        </div>
+        <div>
+          <span class="font-tech text-base tracking-wider text-white font-bold block leading-none">KEMPROMED</span>
+          <span class="text-[11px] uppercase tracking-widest text-slate-400">4 Hubs · Operación Departamental</span>
+        </div>
       </a>
 
-      <nav class="flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-300">
-        <a href="#departamentos" class="hover:text-white transition">Departamentos</a>
-        <a href="#cobertura" class="hover:text-white transition">Cobertura</a>
-        <a href="#contacto" class="hover:text-white transition">Contacto</a>
-      </nav>
-
-      <a href="https://wa.me/5216531321627?text=Hola%20equipo%20KemProMed,%20solicitamos%20informaci%C3%B3n%20y%20diagn%C3%B3stico%20para%20nuestra%20organizaci%C3%B3n."
-         target="_blank"
-         rel="noopener noreferrer"
-         onclick="trackWhatsAppContacto('Header_CTA')"
-         class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
-        Atención KemProMed
-      </a>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="https://wa.me/5216531216270?text=Hola%20Mary%20/%20equipo%20KemProMed,%20queremos%20informaci%C3%B3n%20sobre%20los%20hubs%20y%20agendar%20una%20cita."
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="trackWhatsAppContacto('Header_WhatsApp_Mary')"
+           class="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+          WhatsApp Atención
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Portada principal funcional -->
-  <section id="inicio" class="py-20 px-6 border-b border-slate-800/80 bg-[#090d16]">
-    <div class="max-w-5xl mx-auto">
-      <div class="inline-block text-xs font-semibold tracking-widest uppercase text-blue-400 bg-blue-950/50 border border-blue-800/50 px-3 py-1.5 rounded-md mb-5">
-        Ecosistema Tecnológico · 4 Hubs Sectoriales
+  <!-- Portada visual compacta + Google Calendar Scheduling -->
+  <section id="inicio" class="py-14 px-6 border-b border-slate-800/80 bg-[#090d16]">
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-sky-400 bg-sky-950/50 border border-sky-800/50 px-3 py-1.5 rounded-full mb-4">
+          <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+          Finanzas · Educación · Operación · Salud
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-bold text-white leading-tight mb-3">
+          Cuatro hubs tecnológicos listos para operar
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 mb-6">
+          Plataformas modulares por departamento, agenda directa y enlace inmediato.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="https://wa.me/5216531216270?text=Hola%20Mary%20/%20equipo%20KemProMed,%20queremos%20revisar%20las%20soluciones%20de%20los%20hubs%20y%20agendar%20cita."
+             target="_blank"
+             rel="noopener noreferrer"
+             onclick="trackWhatsAppContacto('Hero_WhatsApp_Mary')"
+             class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-3 rounded-lg transition">
+            Contactar por WhatsApp
+          </a>
+
+          <!-- Google Calendar Appointment Scheduling begin -->
+          <div class="inline-flex items-center">
+            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+            <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+            <script>
+            (function() {
+              var target = document.currentScript;
+              window.addEventListener('load', function() {
+                calendar.schedulingButton.load({
+                  url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0yUPQ80PrSuLZCNBUoZyg_JsxsM3l-OOLFfHkB4cuw03iY-EMWQkSVWqFSGJzEiNY7EHThWBdM?gv=true',
+                  color: '#039BE5',
+                  label: 'Programar una cita',
+                  target,
+                });
+              });
+            })();
+            </script>
+          </div>
+          <!-- end Google Calendar Appointment Scheduling -->
+        </div>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl font-bold text-white leading-tight max-w-4xl mb-5">
-        Plataformas especializadas por sector para operar y escalar sin fricción
-      </h1>
+      <!-- Tarjeta de resumen visual de apps/hubs -->
+      <div class="bg-[#0e1422] border border-slate-800 rounded-2xl p-5 w-full lg:w-96">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Suite de Plataformas</span>
+          <span class="text-xs px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60 font-semibold">4 Módulos</span>
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-center">
+          <a href="#hub-kaura" class="bg-[#090d16] hover:border-amber-500/60 border border-slate-800 rounded-xl p-3 transition">
+            <div class="w-9 h-9 mx-auto mb-2 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-tech font-bold text-sm">K</div>
+            <div class="text-sm font-bold text-white">Motor K-AURA</div>
+            <div class="text-[11px] text-slate-400">Finanzas</div>
+          </a>
 
-      <p class="text-lg text-slate-300 max-w-3xl leading-relaxed mb-8">
-        Arquitectura tecnológica estructurada por departamentos para finanzas, educación, flujos operativos y salud, con atención institucional directa y esquemas de implementación definidos.
-      </p>
+          <a href="#hub-educacion" class="bg-[#090d16] hover:border-indigo-500/60 border border-slate-800 rounded-xl p-3 transition">
+            <div class="w-9 h-9 mx-auto mb-2 rounded-lg bg-indigo-500/15 text-indigo-400 flex items-center justify-center font-tech font-bold text-sm">E</div>
+            <div class="text-sm font-bold text-white">K-Pro-Educación</div>
+            <div class="text-[11px] text-slate-400">Formación</div>
+          </a>
 
-      <div class="flex flex-wrap items-center gap-4">
-        <a href="https://wa.me/5216531321627?text=Hola%20equipo%20KemProMed,%20queremos%20agendar%20una%20sesi%C3%B3n%20t%C3%A9cnica%20para%20revisar%20las%20soluciones%20de%20KemProMed."
-           target="_blank"
-           rel="noopener noreferrer"
-           onclick="trackWhatsAppContacto('Hero_Principal')"
-           class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3.5 rounded-lg transition">
-          Agendar sesión con el equipo
-        </a>
+          <a href="#hub-flow" class="bg-[#090d16] hover:border-cyan-500/60 border border-slate-800 rounded-xl p-3 transition">
+            <div class="w-9 h-9 mx-auto mb-2 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center font-tech font-bold text-sm">F</div>
+            <div class="text-sm font-bold text-white">KemProMed-Flow</div>
+            <div class="text-[11px] text-slate-400">Operación</div>
+          </a>
 
-        <a href="#departamentos"
-           class="border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-6 py-3.5 rounded-lg transition">
-          Ver los 4 hubs
-        </a>
+          <a href="#hub-nexus" class="bg-[#090d16] hover:border-sky-500/60 border border-slate-800 rounded-xl p-3 transition">
+            <div class="w-9 h-9 mx-auto mb-2 rounded-lg bg-sky-500/15 text-sky-400 flex items-center justify-center font-tech font-bold text-sm">+</div>
+            <div class="text-sm font-bold text-white">KemProMed Nexus</div>
+            <div class="text-[11px] text-slate-400">Salud & Urgencias</div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 4 Hubs / Departamentos -->
-  <section id="departamentos" class="py-20 px-6 border-b border-slate-800/80">
+  <!-- 4 Hubs con logotipo, etiqueta corta y acción directa -->
+  <section id="hubs" class="py-14 px-6">
     <div class="max-w-6xl mx-auto">
-      <div class="mb-12">
-        <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Arquitectura por sector</span>
-        <h2 class="text-3xl font-bold text-white mt-2">Cuatro plataformas, cuatro frentes operativos</h2>
-        <p class="text-slate-400 mt-2 max-w-2xl">
-          Cada plataforma atiende requerimientos específicos de su industria bajo operación departamental.
-        </p>
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-xs font-bold tracking-widest uppercase text-slate-400">Departamentos y Aplicaciones</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Selecciona un hub</h2>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-[#0e1422] border border-slate-800 rounded-xl p-6">
-          <div class="text-xs font-bold tracking-wider uppercase text-blue-400 mb-2">Finanzas · Motor K-AURA</div>
-          <h3 class="text-xl font-bold text-white mb-2">Motor K-AURA</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Gestión de flujos financieros, control de operaciones, esquemas de cobro y trazabilidad administrativa para organizaciones.
-          </p>
+
+        <!-- Hub 1: Motor K-AURA -->
+        <div id="hub-kaura" class="bg-[#0e1422] border border-slate-800 rounded-2xl p-6 flex flex-col justify-between gap-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 shrink-0 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Departamento Financiero</span>
+              <h3 class="text-xl font-bold text-white">Motor K-AURA</h3>
+              <p class="text-sm text-slate-300 mt-1">Flujos financieros, cobros y control operativo.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
+            <span class="text-xs text-slate-400">Acceso y cotización</span>
+            <a href="https://wa.me/5216531216270?text=Hola%20equipo%20KemProMed,%20queremos%20informaci%C3%B3n%20sobre%20Motor%20K-AURA."
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="trackWhatsAppContacto('Hub_Motor_KAURA')"
+               class="text-sm font-semibold text-amber-400 hover:text-amber-300">
+              Solicitar acceso →
+            </a>
+          </div>
         </div>
 
-        <div class="bg-[#0e1422] border border-slate-800 rounded-xl p-6">
-          <div class="text-xs font-bold tracking-wider uppercase text-blue-400 mb-2">Educación · K-Pro-Educación</div>
-          <h3 class="text-xl font-bold text-white mb-2">K-Pro-Educación</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Entornos digitales de capacitación, formación institucional, seguimiento académico y distribución estructurada de contenidos.
-          </p>
+        <!-- Hub 2: K-Pro-Educación -->
+        <div id="hub-educacion" class="bg-[#0e1422] border border-slate-800 rounded-2xl p-6 flex flex-col justify-between gap-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 shrink-0 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-400">Departamento Académico</span>
+              <h3 class="text-xl font-bold text-white">K-Pro-Educación</h3>
+              <p class="text-sm text-slate-300 mt-1">Capacitación institucional, cursos y gestión formativa.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
+            <span class="text-xs text-slate-400">Formación y despliegues</span>
+            <a href="https://wa.me/5216531216270?text=Hola%20equipo%20KemProMed,%20queremos%20informaci%C3%B3n%20sobre%20K-Pro-Educaci%C3%B3n."
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="trackWhatsAppContacto('Hub_KPro_Educacion')"
+               class="text-sm font-semibold text-indigo-400 hover:text-indigo-300">
+              Solicitar acceso →
+            </a>
+          </div>
         </div>
 
-        <div class="bg-[#0e1422] border border-slate-800 rounded-xl p-6">
-          <div class="text-xs font-bold tracking-wider uppercase text-blue-400 mb-2">Operación · KemProMed-Flow</div>
-          <h3 class="text-xl font-bold text-white mb-2">KemProMed-Flow</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Estandarización de procesos, control de flujos operativos, seguimiento de tareas y continuidad en la operación diaria.
-          </p>
+        <!-- Hub 3: KemProMed-Flow -->
+        <div id="hub-flow" class="bg-[#0e1422] border border-slate-800 rounded-2xl p-6 flex flex-col justify-between gap-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 shrink-0 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="6" cy="6" r="3" />
+                <circle cx="18" cy="18" r="3" />
+                <path d="M6 9v3a6 6 0 0 0 6 6h3" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Departamento Operativo</span>
+              <h3 class="text-xl font-bold text-white">KemProMed-Flow</h3>
+              <p class="text-sm text-slate-300 mt-1">Trazabilidad, flujos de trabajo y control de procesos.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
+            <span class="text-xs text-slate-400">Control de procesos</span>
+            <a href="https://wa.me/5216531216270?text=Hola%20equipo%20KemProMed,%20queremos%20informaci%C3%B3n%20sobre%20KemProMed-Flow."
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="trackWhatsAppContacto('Hub_KemProMed_Flow')"
+               class="text-sm font-semibold text-cyan-400 hover:text-cyan-300">
+              Solicitar acceso →
+            </a>
+          </div>
         </div>
 
-        <div class="bg-[#0e1422] border border-slate-800 rounded-xl p-6">
-          <div class="text-xs font-bold tracking-wider uppercase text-blue-400 mb-2">Salud · KemProMed Nexus</div>
-          <h3 class="text-xl font-bold text-white mb-2">KemProMed Nexus</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Infraestructura digital enfocada en organización clínica, gestión operativa del sector salud y documentación de procesos.
-          </p>
+        <!-- Hub 4: KemProMed Nexus -->
+        <div id="hub-nexus" class="bg-[#0e1422] border border-slate-800 rounded-2xl p-6 flex flex-col justify-between gap-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 shrink-0 rounded-xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 5v14M5 12h14" stroke-linecap="round" />
+                <rect x="3" y="3" width="18" height="18" rx="4" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400">Departamento de Salud</span>
+              <h3 class="text-xl font-bold text-white">KemProMed Nexus</h3>
+              <p class="text-sm text-slate-300 mt-1">Operación clínica, urgencias y gestión sectorial.</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
+            <span class="text-xs text-emerald-400 font-semibold">● Web App activa</span>
+            <a href="https://kempromed-nexus.onrender.com"
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="trackWhatsAppContacto('Hub_KemProMed_Nexus')"
+               class="text-sm font-semibold text-sky-400 hover:text-sky-300">
+              Abrir KemProMed Nexus →
+            </a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Cobertura y modalidad operativa -->
-  <section id="cobertura" class="py-16 px-6 border-b border-slate-800/80 bg-[#090d16]">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-[#0e1422] border border-slate-800/90 rounded-xl p-6">
-        <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Modalidad</div>
-        <div class="text-lg font-bold text-white mb-1">Implementación y soporte remoto</div>
-        <p class="text-sm text-slate-400">Despliegue ágil, acompañamiento técnico y atención estructurada para equipos y empresas.</p>
-      </div>
-
-      <div class="bg-[#0e1422] border border-slate-800/90 rounded-xl p-6">
-        <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Enfoque</div>
-        <div class="text-lg font-bold text-white mb-1">Soluciones por sector</div>
-        <p class="text-sm text-slate-400">Adaptación al flujo real de cada organización sin plantillas genéricas desconectadas de la operación.</p>
-      </div>
-
-      <div class="bg-[#0e1422] border border-slate-800/90 rounded-xl p-6">
-        <div class="text-xs uppercase tracking-wider text-slate-400 mb-1">Contratación</div>
-        <div class="text-lg font-bold text-white mb-1">Cotización y formalización directa</div>
-        <p class="text-sm text-slate-400">Propuestas, alcances y esquemas de pago gestionados de forma formal y privada.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto directo -->
-  <section id="contacto" class="py-16 px-6">
-    <div class="max-w-4xl mx-auto bg-[#0e1422] border border-slate-800 rounded-2xl p-8 text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">
-        Evalúa qué plataforma se adapta a tu operación
-      </h2>
-      <p class="text-slate-300 max-w-2xl mx-auto mb-6">
-        Conecta con el equipo de KemProMed para revisar alcances, resolver dudas técnicas y definir el siguiente paso para tu empresa o institución.
-      </p>
-      <a href="https://wa.me/5216531321627?text=Hola%20equipo%20KemProMed,%20queremos%20cotizar%20y%20revisar%20alcances%20para%20nuestra%20operaci%C3%B3n."
-         target="_blank"
-         rel="noopener noreferrer"
-         onclick="trackWhatsAppContacto('Seccion_Contacto')"
-         class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-lg transition">
-        Contactar al equipo KemProMed
-      </a>
-    </div>
-  </section>
-
-  <!-- Pie de página sobrio -->
+  <!-- Pie de página con referencia y contactos -->
   <footer class="border-t border-slate-800/80 bg-[#060911] py-8 px-6 text-sm text-slate-400">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
       <div>
-        <span class="font-semibold text-slate-200">KemProMed</span> · Infraestructura tecnológica por departamentos
+        <div class="font-bold text-white">KemProMed · Ecosistema Tecnológico por Departamentos</div>
+        <div class="text-xs text-slate-400 mt-1">
+          Referencia y dirección técnica: <span class="text-slate-200 font-semibold">Dr. Mauro E. Falcón Muñoz</span> · Tel. ref.: <span class="text-slate-200 font-semibold">+52 653 155 2063</span>
+        </div>
       </div>
-      <div class="text-slate-500 text-xs">
-        Atención corporativa y remota · Todos los derechos reservados
+
+      <div class="text-xs text-slate-400">
+        Atención / Citas: <span class="text-emerald-400 font-semibold">+52 653 121 6270</span> · Google Calendar integrado
       </div>
     </div>
   </footer>
